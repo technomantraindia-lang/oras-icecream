@@ -102,13 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const flavourCards = Array.from(document.querySelectorAll('.flavour-card'));
     const categoryToFlavorMap = {
         all: flavourCards.map((card) => card.dataset.id || ''),
-        candy: ['strawberry', 'mango', 'mint'],
-        chocobar: ['chocolate', 'cookies', 'pistachio'],
-        kulfi: ['pistachio', 'mango', 'chocolate'],
-        cup: ['mango', 'mint', 'strawberry'],
-        cone: ['strawberry', 'chocolate', 'mango', 'pistachio', 'mint', 'cookies'],
-        family: ['chocolate', 'cookies', 'strawberry'],
-        bulk: ['mango', 'pistachio', 'chocolate']
+        candy: ['paanmasala', 'kesarpista'],
+        chocobar: ['chocochips', 'americannuts'],
+        kulfi: ['kesarpista', 'paanmasala'],
+        cup: ['vanilla', 'butterscotch'],
+        cone: ['vanilla', 'butterscotch', 'chocochips', 'americannuts'],
+        family: ['vanilla', 'butterscotch', 'chocochips', 'americannuts', 'kesarpista', 'paanmasala'],
+        bulk: ['vanilla', 'butterscotch', 'chocochips', 'kesarpista']
     };
 
     const applyCategoryFilter = (category) => {
