@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORAS Ice Cream | Crafted for Every Craving</title>
+    <meta name="description"
+        content="Discover ORAS ice creams, family packs, cones, cups, and frozen desserts made with rich ingredients and joyful flavours.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lobster+Two:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ORAS Premium Preloader -->
+    <div id="oras-preloader" class="oras-preloader">
+        <div class="preloader-bg-swirls">
+            <div class="swirl swirl-1"></div>
+            <div class="swirl swirl-2"></div>
+        </div>
+        <div class="preloader-content">
+            <!-- Center Ice Cream Cup SVG Animation -->
+            <div class="icecream-container">
+                <svg viewBox="0 0 200 200" class="icecream-svg">
+                    <!-- Floating toppings (Choco chips / Strawberry dots) -->
+                    <circle cx="50" cy="60" r="4" class="topping topping-dot topping-1" />
+                    <rect x="145" y="45" width="6" height="6" rx="2" class="topping topping-chip topping-2" />
+                    <circle cx="150" cy="95" r="3.5" class="topping topping-dot topping-3" />
+                    <rect x="40" y="110" width="6" height="6" rx="2" class="topping topping-chip topping-4" />
+
+                    <!-- Ice Cream Scoop dropping -->
+                    <g class="icecream-scoop-group">
+                        <circle cx="100" cy="-60" r="42" class="icecream-scoop" />
+                        <!-- Strawberry Syrup Drizzle overlay on the scoop -->
+                        <path d="M 62,-54 C 65,-40 75,-35 80,-42 C 85,-50 95,-38 100,-46 C 105,-54 115,-36 122,-44 C 129,-52 135,-38 138,-54 C 135,-78 120,-96 100,-96 C 80,-96 65,-78 62,-54 Z" class="syrup-drizzle" />
+                    </g>
+
+                    <!-- Cup container -->
+                    <g class="icecream-cup-group">
+                        <!-- Cup Back Rim -->
+                        <ellipse cx="100" cy="110" rx="46" ry="12" class="cup-rim-back" />
+                        <!-- Cup Base -->
+                        <path d="M 58,114 L 68,168 C 69,173 73,178 78,178 L 122,178 C 127,178 131,173 132,168 L 142,114 Z" class="cup-body" />
+                        <!-- Cup Front Rim -->
+                        <ellipse cx="100" cy="110" rx="46" ry="12" class="cup-rim-front" />
+                        <!-- Golden Accent Lines on Cup -->
+                        <path d="M 68,124 L 74,158 M 132,124 L 126,158 M 100,128 L 100,166" class="cup-accents" />
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Preloader Progress (Dripping Syrup Line) -->
+            <div class="preloader-progress-bar">
+                <div class="progress-line-fill"></div>
+                <!-- Syrup Drop dripping from the progress fill end -->
+                <div class="progress-syrup-drop"></div>
+            </div>
+
+            <!-- Reveal ORAS Logo text -->
+            <div class="preloader-logo-reveal">
+                <h1 class="loader-logo-text">ORAS</h1>
+                <span class="loader-logo-sub">EST. 2018</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#home" class="logo-container" aria-label="ORAS home">
+                <img src="images/logo.png" alt="ORAS Logo" class="brand-logo">
+            </a>
+
+            <nav class="nav-menu" aria-label="Primary">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#flavours">Flavours</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contact-section" class="btn-quote">Get a Quote</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-video-wrapper">
+                <video class="hero-banner-video" autoplay loop muted playsinline>
+                    <source src="images/final%20banner.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="about" class="story-section">
+            <div class="shell story-layout">
+                <!-- Left spacer to preserve left-side layout for background illustration -->
+                <div class="story-spacer"></div>
+
+                <div class="story-copy scroll-reveal">
+                    <div class="story-branding">
+                        <span class="story-brand-name">ORAS</span>
+                        <span class="story-est">EST. 2018</span>
+                    </div>
+                    <h2 class="story-title">OUR STORY</h2>
+                    <div class="story-separator">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <p class="story-text">
+                        ORAS began in 2018 with a simple dream – to craft extraordinary ice cream and frozen desserts that bring happiness to everyday moments.
+                    </p>
+                    <p class="story-text">
+                        From the very beginning, we've poured our hearts into using the finest ingredients, real fruits, rich creams, and chocolatey indulgence to create flavours that feel joyful, comforting, and truly special.
+                    </p>
+                    <div class="story-action">
+                        <a href="#contact-section" class="btn btn-story">TASTE OUR MAGIC <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="story-features">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-ice-cream"></i>
+                            <div class="feature-info">
+                                <span>Made with Love</span>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-leaf"></i>
+                            <div class="feature-info">
+                                <span>Premium Ingredients</span>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="feature-info">
+                                <span>Quality Promise</span>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-face-smile"></i>
+                            <div class="feature-info">
+                                <span>Joy in Every Scoop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip">
+            <div class="shell trust-grid">
+                <div class="trust-item">
+                    <i class="fa-solid fa-seedling"></i>
+                    <span>Natural ingredients</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-award"></i>
+                    <span>Premium quality</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <span>Perfect frozen freshness</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Made for every age group</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="categories-section">
+            <div class="shell">
+                <div class="section-intro scroll-reveal">
+                    <span class="eyebrow">Product range</span>
+                    <h2>Choose your favourite format</h2>
+                    <p>From quick treats to party-ready tubs, ORAS has a format for every craving and occasion.</p>
+                </div>
+
+                <div class="categories-grid">
+                    <button class="category-card active" data-category="all" aria-label="Show all products">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/new%20all%20product%20.png" alt="All Products" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Our Collection</span>
+                                <span class="category-name">All Products</span>
+                                <span class="category-desc">Explore our entire range of delightful ice creams and premium frozen desserts.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="candy" aria-label="Show candy category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/candy%20new%20.png" alt="Candy" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Icy Pops</span>
+                                <span class="category-name">Candy</span>
+                                <span class="category-desc">Fun, icy, and refreshing treats on a stick to sweeten your sunny days.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="chocobar" aria-label="Show chocobar category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/chocobar%20new%27.png" alt="Chocobar" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Chocolate Coating</span>
+                                <span class="category-name">Chocobar</span>
+                                <span class="category-desc">Rich, creamy vanilla ice cream dipped in a thick, crackling chocolate shell.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="kulfi" aria-label="Show kulfi category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/new%20kulfi.png" alt="Kulfi" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Desi Delight</span>
+                                <span class="category-name">Kulfi</span>
+                                <span class="category-desc">Traditional, slow-churned Indian dessert infused with rich nuts and cardamom.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="cup" aria-label="Show cup category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/new%20cup.png" alt="Cup" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Scoop & Joy</span>
+                                <span class="category-name">Cup</span>
+                                <span class="category-desc">Convenient cups of pure indulgence, perfect for a quick and mess-free treat.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="cone" aria-label="Show cone category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/new%20cone.png" alt="Cone" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Crunchy Waffle</span>
+                                <span class="category-name">Cone</span>
+                                <span class="category-desc">Crispy waffle cones loaded with smooth ice cream and a chocolate-filled tip.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="family" aria-label="Show family pack category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/new%20family%20pack.png" alt="Family Pack" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Sharing Joy</span>
+                                <span class="category-name">Family Pack</span>
+                                <span class="category-desc">Generous tubs of delicious goodness, made for sharing happy moments together.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                    
+                    <button class="category-card" data-category="bulk" aria-label="Show bulk category">
+                        <span class="category-card-inner">
+                            <span class="category-img-wrapper">
+                                <span class="category-img-bg"></span>
+                                <img src="images/5%20litre.png" alt="5 Litre Bulk" class="category-image">
+                            </span>
+                            <span class="category-card-info">
+                                <span class="category-badge">Party Size</span>
+                                <span class="category-name">5 Litre Bulk</span>
+                                <span class="category-desc">Large-scale dessert options, crafted for parties, events, and grand celebrations.</span>
+                                <span class="category-action-link">Select Category <i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="flavours" class="flavours-section">
+            <div class="shell">
+                <div class="section-intro scroll-reveal">
+                    <span class="eyebrow">Signature Menu</span>
+                    <h2>Explore Our Premium Flavours</h2>
+                    <p>Each recipe is meticulously crafted with real ingredients to deliver pure, rich joy in every single scoop.</p>
+                </div>
+
+                <div class="flavours-grid">
+                    <article class="flavour-card" data-id="strawberry">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_strawberry.png" alt="Strawberry Delight">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Berry Favourite</span>
+                                <h3>Strawberry Delight</h3>
+                                <p class="flavour-copy">Silky strawberry swirls with a playful, creamy finish.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> 100% Real Berries</span>
+                                    <span><i class="fa-solid fa-check"></i> Fresh Cream</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card" data-id="chocolate">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_chocolate.png" alt="Chocolate Magic">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Classic Rich</span>
+                                <h3>Chocolate Magic</h3>
+                                <p class="flavour-copy">Deep cocoa flavour made extra smooth for true chocolate fans.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> Belgian Cocoa</span>
+                                    <span><i class="fa-solid fa-check"></i> Extra Smooth</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card" data-id="mango">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_mango.png" alt="Mango Sunshine">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Tropical Burst</span>
+                                <h3>Mango Sunshine</h3>
+                                <p class="flavour-copy">Bright mango notes that bring summer energy to every bite.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> Alphonso Pulp</span>
+                                    <span><i class="fa-solid fa-check"></i> Dairy Free Option</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card" data-id="pistachio">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_pistachio.png" alt="Pistachio Bliss">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Nutty Premium</span>
+                                <h3>Pistachio Bliss</h3>
+                                <p class="flavour-copy">Elegant pistachio richness with a premium dessert profile.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> Roasted Pistachios</span>
+                                    <span><i class="fa-solid fa-check"></i> Rich Texture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card" data-id="mint">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_mint.png" alt="Mint Frost">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Cool & Fresh</span>
+                                <h3>Mint Frost</h3>
+                                <p class="flavour-copy">Refreshing mint cream that feels light, cool, and uplifting.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> Organic Mint Oil</span>
+                                    <span><i class="fa-solid fa-check"></i> Double Churned</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card" data-id="cookies">
+                        <div class="flavour-card-inner">
+                            <div class="flavour-img-box">
+                                <img src="images/flavor_cookies.png" alt="Cookies Crush">
+                            </div>
+                            <div class="flavour-info">
+                                <span class="flavour-tag">Crunchy Indulgence</span>
+                                <h3>Cookies Crush</h3>
+                                <p class="flavour-copy">Creamy scoops packed with cookie crunch for extra texture.</p>
+                                <div class="flavour-highlights">
+                                    <span><i class="fa-solid fa-check"></i> Oreo Crumbles</span>
+                                    <span><i class="fa-solid fa-check"></i> Cream Cookie Mix</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="flavours-action">
+                    <a href="#products" class="btn btn-dark">See More Flavours <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="choose-section">
+            <div class="shell choose-layout">
+                <div class="choose-visual scroll-reveal">
+                    <img src="images/why%20chooose.png" alt="ORAS dessert platter">
+                </div>
+                <div class="choose-copy scroll-reveal">
+                    <span class="eyebrow">Why choose ORAS</span>
+                    <h2>Beautiful presentation backed by serious product quality.</h2>
+                    <p>
+                        We focus on balance: rich taste, safe preparation, premium ingredients, and product options
+                        that work for both personal treats and large gatherings.
+                    </p>
+                    <div class="choose-points">
+                        <article>
+                            <i class="fa-solid fa-spoon"></i>
+                            <div>
+                                <h3>Carefully crafted recipes</h3>
+                                <p>Smooth textures and flavour-forward combinations in every product line.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            <div>
+                                <h3>Hygienic preparation</h3>
+                                <p>Prepared with consistency and care to maintain freshness and trust.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-gift"></i>
+                            <div>
+                                <h3>Perfect for every occasion</h3>
+                                <p>Quick snacks, celebrations, stores, events, and family sharing moments.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials-section">
+            <div class="shell testimonials-layout">
+                <!-- Left Side: Testimonials Stack -->
+                <div class="testimonials-left-col">
+                    <div class="testimonials-sets-wrapper">
+                        <!-- Set 1 -->
+                        <div class="testimonial-set active" data-set="1">
+                            <article class="testimonial-card-bubble bottom-right">
+                                <p class="testimonial-bubble-text">"Oras ice creams are rich, creamy, and look premium the moment you serve them."</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar pink-avatar">P</div>
+                                        <div>
+                                            <strong>Priya S.</strong>
+                                            <span>Family Customer</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+
+                            <article class="testimonial-card-bubble bottom-left">
+                                <p class="testimonial-bubble-text">"The family packs are perfect for weekends and the mango flavour is always the first one to finish."</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar blue-avatar">R</div>
+                                        <div>
+                                            <strong>Rahul M.</strong>
+                                            <span>Weekend Shopper</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+
+                            <article class="testimonial-card-bubble bottom-right">
+                                <p class="testimonial-bubble-text">"Pistachio and cookies both feel premium. Great taste, nice texture, and very easy to recommend."</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar yellow-avatar">N</div>
+                                        <div>
+                                            <strong>Neha K.</strong>
+                                            <span>Ice Cream Lover</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+                        </div>
+
+                        <!-- Set 2 -->
+                        <div class="testimonial-set" data-set="2">
+                            <article class="testimonial-card-bubble bottom-right">
+                                <p class="testimonial-bubble-text">"The chocolate magic is out of this world! Real cocoa coating makes all the difference."</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar pink-avatar">A</div>
+                                        <div>
+                                            <strong>Amit V.</strong>
+                                            <span>Chocolate Lover</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+
+                            <article class="testimonial-card-bubble bottom-left">
+                                <p class="testimonial-bubble-text">"I love the kulfi cups. It feels like pure heritage combined with modern quality standard."</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar blue-avatar">S</div>
+                                        <div>
+                                            <strong>Sneha R.</strong>
+                                            <span>Heritage Dessert Fan</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+
+                            <article class="testimonial-card-bubble bottom-right">
+                                <p class="testimonial-bubble-text">"Packaging keeps the ice creams frozen rock-solid even during delivery in hot summer days!"</p>
+                                <div class="testimonial-bubble-footer">
+                                    <div class="author-info">
+                                        <div class="author-avatar yellow-avatar">K</div>
+                                        <div>
+                                            <strong>Karan J.</strong>
+                                            <span>Party Host</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-stars-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="bubble-dot"></span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Heading Column -->
+                <div class="testimonials-right-col">
+                    <span class="testimonials-eyebrow">Customer Voice</span>
+                    <h2 class="testimonials-huge-title">WHAT ORAS LOVERS SAY</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="shell newsletter-layout">
+                <div class="newsletter-copy scroll-reveal">
+                    <span class="eyebrow">Stay in the loop</span>
+                    <h2>Let our flavours find you first.</h2>
+                    <p>Subscribe for updates on new launches, offers, and crowd favourites.</p>
+                </div>
+                <form class="newsletter-form scroll-reveal"
+                    onsubmit="event.preventDefault(); alert('Thank you for subscribing to ORAS.'); this.reset();">
+                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-section">
+            <div class="shell">
+                <div class="section-intro scroll-reveal">
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2>Contact Us / Request a Quote</h2>
+                    <p>Have questions about party orders, bulk distributions, or want to get a quote? Message us directly!</p>
+                </div>
+
+                <div class="contact-layout scroll-reveal">
+                    <!-- Left: Contact Form Card -->
+                    <div class="contact-form-card">
+                        <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! Our team will get back to you shortly.'); this.reset();">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Full Name</label>
+                                    <input type="text" id="contact-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address</label>
+                                    <input type="email" id="contact-email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-phone">Phone Number</label>
+                                    <input type="tel" id="contact-phone" placeholder="+91 98765 43210" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-subject">Interested In</label>
+                                    <select id="contact-subject">
+                                        <option value="quote">Get a Quote</option>
+                                        <option value="bulk">Bulk Distribution</option>
+                                        <option value="catering">Party Catering</option>
+                                        <option value="feedback">General Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark submit-contact-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Contact Info Card -->
+                    <div class="contact-details-card">
+                        <div class="details-branding">
+                            <img src="images/logo.png" alt="ORAS Logo" class="details-logo">
+                            <h3>ORAS Ice Cream</h3>
+                            <p>Crafting frozen happiness since 2018.</p>
+                        </div>
+                        <hr class="details-divider">
+                        <ul class="details-info-list">
+                            <li>
+                                <div class="details-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <a href="tel:+919876543210">+91 98765 43210</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="details-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <strong>Email Address</strong>
+                                    <a href="mailto:info@orasicecreams.com">info@orasicecreams.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="details-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <strong>Factory Address</strong>
+                                    <span>Agro Food Park-II, Ranpur Industrial Area, Kota, Rajasthan - 324003</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="main-footer">
+        <div class="shell footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="ORAS Logo" class="footer-logo">
+                <p>Crafted with care using quality ingredients to create everyday dessert joy.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#flavours">Flavours</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#products" data-filter="candy">Candy</a></li>
+                    <li><a href="#products" data-filter="chocobar">Chocobar</a></li>
+                    <li><a href="#products" data-filter="kulfi">Kulfi</a></li>
+                    <li><a href="#products" data-filter="cup">Cup</a></li>
+                    <li><a href="#products" data-filter="cone">Cone</a></li>
+                    <li><a href="#products" data-filter="family">Family Pack</a></li>
+                    <li><a href="#products" data-filter="bulk">5 Litre Bulk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="contact-info-list">
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a
+                            href="mailto:info@orasicecreams.com">info@orasicecreams.com</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Agro Food Park-II, Ranpur Industrial Area,
+                            Kota, Rajasthan - 324003</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="shell footer-bottom">
+            <p>&copy; 2026 ORAS Ice Creams. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
