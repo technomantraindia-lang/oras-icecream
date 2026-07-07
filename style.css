@@ -456,8 +456,8 @@ button {
 
 .hero-banner-video {
     width: 100%;
-    height: calc(100vh - 88px);
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 
@@ -2458,3 +2458,35 @@ body.loader-active {
     letter-spacing: 0.22em;
     text-transform: uppercase;
 }
+
+/* ==========================================================================
+   ORAS SCROLL REVEAL CONTENT ANIMATIONS
+   ========================================================================== */
+.reveal-content {
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-content.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-content.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal-content.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .reveal-content.reveal-left {
+        transform: translateX(-40px);
+    }
+    .reveal-content.reveal-right {
+        transform: translateX(40px);
+    }
+}
+

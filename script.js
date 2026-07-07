@@ -137,4 +137,45 @@ document.addEventListener('DOMContentLoaded', () => {
             window.setTimeout(() => applyCategoryFilter(filterType), 350);
         });
     });
+
+    // Section Scroll Reveal Logic (Alternating Left/Right)
+    const contentSections = Array.from(document.querySelectorAll('main > section')).filter(sec => sec.id !== 'home');
+    
+    contentSections.forEach((section, index) => {
+        const shell = section.querySelector('.shell');
+        if (shell) {
+            shell.classList.add('reveal-content');
+            // Alternate left and right entry
+            if (index % 2 === 0) {
+                shell.classList.add('reveal-left');
+            } else {
+                shell.classList.add('reveal-right');
+            }
+        }
+    });
+
+    if (contentSections.length > 0) {
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const shell = entry.target.querySelector('.shell');
+                    if (shell) {
+                        shell.classList.add('revealed');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08, // Trigger early when the section enters the screen
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        contentSections.forEach((section) => {
+            const shell = section.querySelector('.shell');
+            if (shell) {
+                sectionObserver.observe(section);
+            }
+        });
+    }
 });
+
