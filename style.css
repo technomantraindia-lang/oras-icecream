@@ -1061,7 +1061,7 @@ section {
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.75;
-    color: var(--white);
+    color: #ffffff !important;
     margin-bottom: 22px;
 }
 
