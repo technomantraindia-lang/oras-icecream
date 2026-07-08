@@ -177,5 +177,120 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ==========================================================================
+    // ORAS FLOATING WHATSAPP FLOW WIDGET & DISTRIBUTOR FORM HANDLERS
+    // ==========================================================================
+
+    // WhatsApp Submission Helper
+    function sendWhatsAppInquiry(details) {
+        const phone = "919876543210"; // Official inquiry number
+        const messageText = `👋 Hello ORAS Ice Cream Team,
+
+I would like to apply to become an ORAS Ice Cream Distributor. Here are my details:
+
+👤 *Name:* ${details.name}
+📞 *Mobile Number:* ${details.mobile}
+💬 *WhatsApp Number:* ${details.whatsapp}
+📧 *Email:* ${details.email || 'Not provided'}
+📍 *Location:* ${details.city}, ${details.district}, ${details.state}
+💼 *Current Business:* ${details.business}
+❄️ *Cold Storage Available?:* ${details.coldstorage}
+🚚 *Delivery Vehicle Available?:* ${details.deliveryvehicle}
+💰 *Investment Capacity:* ${details.investment}
+📈 *Expected Monthly Business:* ${details.expectedbusiness}
+📝 *Message:* ${details.message}
+
+Thank you!`;
+
+        const encodedMessage = encodeURIComponent(messageText);
+        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+        window.open(url, '_blank');
+    }
+
+    // Main Contact Section WhatsApp Submit Button handler
+    const mainForm = document.querySelector('#contact-section form');
+    const mainWaSubmitBtn = document.getElementById('submit-whatsapp-btn');
+    if (mainForm && mainWaSubmitBtn) {
+        mainWaSubmitBtn.addEventListener('click', (e) => {
+            // Check form validity
+            if (!mainForm.checkValidity()) {
+                mainForm.reportValidity();
+                return;
+            }
+
+            const details = {
+                name: document.getElementById('distributor-name').value,
+                mobile: document.getElementById('distributor-mobile').value,
+                whatsapp: document.getElementById('distributor-whatsapp').value,
+                email: document.getElementById('distributor-email').value,
+                state: document.getElementById('distributor-state').value,
+                district: document.getElementById('distributor-district').value,
+                city: document.getElementById('distributor-city').value,
+                business: document.getElementById('distributor-business').value,
+                coldstorage: document.getElementById('distributor-coldstorage').value,
+                deliveryvehicle: document.getElementById('distributor-deliveryvehicle').value,
+                investment: document.getElementById('distributor-investment').value,
+                expectedbusiness: document.getElementById('distributor-expectedbusiness').value,
+                message: document.getElementById('distributor-message').value
+            };
+
+            sendWhatsAppInquiry(details);
+        });
+    }
+
+    // Floating WhatsApp Widget Panel Open/Close logic
+    const waFlowBtn = document.getElementById('whatsapp-flow-btn');
+    const waFlowPanel = document.getElementById('whatsapp-flow-panel');
+    const waFlowClose = document.getElementById('whatsapp-flow-close');
+    const waFlowForm = document.getElementById('whatsapp-flow-form');
+
+    if (waFlowBtn && waFlowPanel && waFlowClose) {
+        // Toggle panel open/close
+        waFlowBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waFlowPanel.classList.toggle('open');
+        });
+
+        // Close panel
+        waFlowClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waFlowPanel.classList.remove('open');
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!waFlowPanel.contains(e.target) && e.target !== waFlowBtn && !waFlowBtn.contains(e.target)) {
+                waFlowPanel.classList.remove('open');
+            }
+        });
+
+        // Form submit inside panel
+        if (waFlowForm) {
+            waFlowForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const details = {
+                    name: document.getElementById('wa-name').value,
+                    mobile: document.getElementById('wa-mobile').value,
+                    whatsapp: document.getElementById('wa-whatsapp').value,
+                    email: document.getElementById('wa-email').value,
+                    state: document.getElementById('wa-state').value,
+                    district: document.getElementById('wa-district').value,
+                    city: document.getElementById('wa-city').value,
+                    business: document.getElementById('wa-business').value,
+                    coldstorage: document.getElementById('wa-coldstorage').value,
+                    deliveryvehicle: document.getElementById('wa-deliveryvehicle').value,
+                    investment: document.getElementById('wa-investment').value,
+                    expectedbusiness: document.getElementById('wa-expectedbusiness').value,
+                    message: document.getElementById('wa-message').value
+                };
+
+                sendWhatsAppInquiry(details);
+                waFlowPanel.classList.remove('open');
+                waFlowForm.reset();
+            });
+        }
+    }
 });
 

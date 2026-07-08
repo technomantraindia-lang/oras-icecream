@@ -693,7 +693,10 @@
                                 <label for="distributor-message">Message</label>
                                 <textarea id="distributor-message" rows="5" placeholder="Tell us more about your business experience or market area..." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-dark submit-contact-btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
+                            <div class="contact-form-actions" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                                <button type="submit" class="btn btn-dark submit-contact-btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
+                                <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp submit-contact-btn" style="background-color: #25d366; color: white; border: 1px solid #1ebd56;">Apply via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+                            </div>
                         </form>
                     </div>
 
@@ -798,6 +801,106 @@
             <p>&copy; 2026 ORAS Ice Creams. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button and Flow Panel -->
+    <div id="whatsapp-flow-widget" class="whatsapp-flow-widget">
+        <button id="whatsapp-flow-btn" class="whatsapp-flow-btn" aria-label="Open WhatsApp Flow Form">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-flow-tooltip">Distributor Flow</span>
+        </button>
+        <div id="whatsapp-flow-panel" class="whatsapp-flow-panel">
+            <div class="whatsapp-panel-header" style="background-image: linear-gradient(rgba(115, 6, 11, 0.82), rgba(115, 6, 11, 0.95)), url('images/abouut.png');">
+                <div class="whatsapp-header-content">
+                    <img src="images/logo.png" alt="ORAS Logo" class="whatsapp-panel-logo">
+                    <div class="whatsapp-header-text">
+                        <h3>ORAS Ice Cream</h3>
+                        <p>Distributor WhatsApp Flow</p>
+                    </div>
+                </div>
+                <button id="whatsapp-flow-close" class="whatsapp-flow-close" aria-label="Close panel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="whatsapp-panel-body">
+                <p class="whatsapp-panel-desc">Interested in partnering with us? Fill in the details below to generate and send your application directly via WhatsApp!</p>
+                <form id="whatsapp-flow-form">
+                    <div class="whatsapp-form-group">
+                        <label for="wa-name">Name</label>
+                        <input type="text" id="wa-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="whatsapp-form-row">
+                        <div class="whatsapp-form-group">
+                            <label for="wa-mobile">Mobile Number</label>
+                            <input type="tel" id="wa-mobile" placeholder="Mobile Number" required>
+                        </div>
+                        <div class="whatsapp-form-group">
+                            <label for="wa-whatsapp">WhatsApp Number</label>
+                            <input type="tel" id="wa-whatsapp" placeholder="WhatsApp Number" required>
+                        </div>
+                    </div>
+                    <div class="whatsapp-form-group">
+                        <label for="wa-email">Email (Optional)</label>
+                        <input type="email" id="wa-email" placeholder="Enter email address">
+                    </div>
+                    <div class="whatsapp-form-row">
+                        <div class="whatsapp-form-group">
+                            <label for="wa-state">State</label>
+                            <input type="text" id="wa-state" placeholder="State" required>
+                        </div>
+                        <div class="whatsapp-form-group">
+                            <label for="wa-district">District</label>
+                            <input type="text" id="wa-district" placeholder="District" required>
+                        </div>
+                    </div>
+                    <div class="whatsapp-form-row">
+                        <div class="whatsapp-form-group">
+                            <label for="wa-city">City</label>
+                            <input type="text" id="wa-city" placeholder="City" required>
+                        </div>
+                        <div class="whatsapp-form-group">
+                            <label for="wa-business">Current Business</label>
+                            <input type="text" id="wa-business" placeholder="Retail/FMCG etc." required>
+                        </div>
+                    </div>
+                    <div class="whatsapp-form-row">
+                        <div class="whatsapp-form-group">
+                            <label for="wa-coldstorage">Cold Storage?</label>
+                            <select id="wa-coldstorage" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="whatsapp-form-group">
+                            <label for="wa-deliveryvehicle">Vehicle?</label>
+                            <select id="wa-deliveryvehicle" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="whatsapp-form-row">
+                        <div class="whatsapp-form-group">
+                            <label for="wa-investment">Investment Capacity</label>
+                            <input type="text" id="wa-investment" placeholder="e.g. Rs. 5 Lakhs" required>
+                        </div>
+                        <div class="whatsapp-form-group">
+                            <label for="wa-expectedbusiness">Expected Business</label>
+                            <input type="text" id="wa-expectedbusiness" placeholder="e.g. Rs. 2 Lakhs" required>
+                        </div>
+                    </div>
+                    <div class="whatsapp-form-group">
+                        <label for="wa-message">Message</label>
+                        <textarea id="wa-message" rows="3" placeholder="Tell us more about your experience..." required></textarea>
+                    </div>
+                    <button type="submit" class="wa-panel-submit-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
