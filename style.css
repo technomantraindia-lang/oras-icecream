@@ -3317,6 +3317,22 @@ body.loader-active {
 /* ==========================================================================
    MOBILE VIEWPORT AND ALIGNMENT FIXES
    ========================================================================== */
+@media (max-width: 991px) {
+    /* Center About Intro content on mobile/tablet */
+    .about-intro-content {
+        text-align: center !important;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Prevent horizontal slide reveal animations from causing layout scroll overflow */
+    .reveal-content.reveal-left,
+    .reveal-content.reveal-right {
+        transform: translateY(20px) !important;
+    }
+}
+
 @media (max-width: 576px) {
     /* Prevent card horizontal paddings from clipping layout contents */
     .contact-details-card,
@@ -3335,6 +3351,34 @@ body.loader-active {
     .about-hero-content {
         padding-left: 16px !important;
         padding-right: 16px !important;
+    }
+
+    /* Center text sections and features on mobile */
+    .choose-copy {
+        text-align: center !important;
+    }
+
+    .choose-points article {
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+        text-align: center !important;
+        padding: 24px 20px !important;
+    }
+
+    .choose-points i {
+        margin: 0 auto 10px !important;
+    }
+
+    /* Center footer columns and layout on mobile */
+    .footer-col {
+        text-align: center !important;
+    }
+
+    .footer-col ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
     }
 
     /* Optimize header spacing to fit narrow screens */

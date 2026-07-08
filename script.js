@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // WhatsApp Submission Helper
     function sendWhatsAppInquiry(details) {
-        const phone = "919876543210"; // Official inquiry number
+        const phone = "919672334414"; // Official inquiry number
         const messageText = `👋 Hello ORAS Ice Cream Team,
 
 I would like to apply to become an ORAS Ice Cream Distributor. Here are my details:
