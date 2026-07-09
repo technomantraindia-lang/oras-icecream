@@ -3432,3 +3432,426 @@ body.loader-active {
         height: 80px !important;
     }
 }
+
+/* ==========================================================================
+   CONTACT PAGE CUSTOM ANIMATED STYLES
+   ========================================================================== */
+
+.contact-hero {
+    background: linear-gradient(135deg, rgba(115, 6, 11, 0.92) 0%, rgba(74, 3, 6, 0.97) 100%), url('images/bg%20product.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 110px 0 85px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero h1 {
+    font-family: var(--font-script);
+    font-size: 4.2rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+    animation: contact-hero-slide 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-hero p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.92;
+    line-height: 1.6;
+    animation: contact-hero-slide 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-sweets-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-sweet {
+    position: absolute;
+    color: var(--gold);
+    opacity: 0.12;
+    pointer-events: none;
+    animation: float-slow 12s infinite ease-in-out alternate;
+}
+
+.floating-sweet-1 { top: 20%; left: 8%; font-size: 2.2rem; animation-delay: 0s; }
+.floating-sweet-2 { top: 60%; left: 15%; font-size: 1.8rem; animation-delay: -3s; }
+.floating-sweet-3 { top: 15%; right: 12%; font-size: 2.5rem; animation-delay: -5s; }
+.floating-sweet-4 { top: 70%; right: 8%; font-size: 2rem; animation-delay: -8s; }
+
+@keyframes float-slow {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    100% { transform: translateY(-30px) rotate(20deg) scale(1.1); }
+}
+
+@keyframes contact-hero-slide {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* 3D Perspective Card Layout Wrapper */
+.perspective-container {
+    perspective: 1200px;
+    width: 100%;
+}
+
+.contact-details-card {
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+/* Live Form Progress Tracker Styles */
+.form-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--ink-700);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.form-progress-percentage {
+    color: var(--red-700);
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.form-progress-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(24, 19, 26, 0.08);
+    border-radius: 999px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--red-700) 0%, var(--red-600) 100%);
+    border-radius: 999px;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Business Hours Card */
+.hours-card {
+    background: var(--cream-200);
+    border: 1px solid rgba(248, 229, 216, 0.6);
+    border-radius: var(--radius-lg);
+    padding: 24px 30px;
+    margin-top: 24px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hours-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+.hours-card-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--red-900);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.hours-card-info p {
+    font-size: 0.88rem;
+    color: var(--ink-700);
+    font-weight: 500;
+}
+
+.hours-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hours-status.open {
+    background: var(--mint);
+    color: #0d9488;
+}
+
+.hours-status.closed {
+    background: #ffebe9;
+    color: var(--red-700);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-dot.active-pulse {
+    animation: status-pulse-glow 1.2s infinite alternate;
+}
+
+@keyframes status-pulse-glow {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Stylized Interactive Map Mockup */
+.map-mockup-card {
+    background: #fffaf7;
+    border: 1px solid rgba(115, 6, 11, 0.08);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    height: 250px;
+}
+
+.map-mockup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.map-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(rgba(248, 229, 216, 0.7) 1.5px, transparent 1.5px),
+        linear-gradient(rgba(248, 229, 216, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(248, 229, 216, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px, 40px 40px, 40px 40px;
+    opacity: 0.85;
+}
+
+.map-road-vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 45%;
+    width: 32px;
+    background: rgba(24, 19, 26, 0.03);
+    border-left: 1px dashed rgba(24, 19, 26, 0.08);
+    border-right: 1px dashed rgba(24, 19, 26, 0.08);
+}
+
+.map-road-horizontal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55%;
+    height: 28px;
+    background: rgba(24, 19, 26, 0.03);
+    border-top: 1px dashed rgba(24, 19, 26, 0.08);
+    border-bottom: 1px dashed rgba(24, 19, 26, 0.08);
+}
+
+.map-river-shape {
+    position: absolute;
+    right: -25px;
+    top: -35px;
+    width: 150px;
+    height: 180px;
+    background: rgba(13, 148, 136, 0.04);
+    border-radius: 50%;
+    filter: blur(6px);
+    transform: rotate(-25deg);
+}
+
+.map-pin-container {
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.map-pin {
+    color: var(--red-700);
+    font-size: 2.2rem;
+    animation: bounce-pin 2s infinite ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(115, 6, 11, 0.22));
+    transition: transform 0.3s ease;
+}
+
+.map-pin-ripple {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    background: rgba(181, 18, 24, 0.28);
+    border-radius: 50%;
+    top: 32px;
+    animation: pulse-ring 2s infinite ease-out;
+    z-index: -1;
+}
+
+.map-pin-label {
+    background: var(--ink-900);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background var(--transition), transform var(--transition);
+}
+
+.map-pin-container:hover .map-pin-label {
+    background: var(--red-700);
+    transform: scale(1.05);
+}
+
+.map-pin-container:hover .map-pin {
+    color: var(--red-600);
+}
+
+.map-overlay-button {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    border: 1px solid rgba(24, 19, 26, 0.08);
+    border-radius: 99px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--ink-900);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.map-mockup-card:hover .map-overlay-button {
+    background: var(--red-700);
+    color: var(--white);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+@keyframes bounce-pin {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Success Overlay Screen for Form Submission */
+.success-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
+    z-index: 50;
+}
+
+.success-overlay.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.success-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--mint);
+    color: #0d9488;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    transform: scale(0.6);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-overlay.show .success-icon-wrapper {
+    transform: scale(1);
+}
+
+.success-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--red-900);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.success-text {
+    font-size: 0.98rem;
+    color: var(--ink-700);
+    max-width: 320px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.success-overlay-close-btn {
+    padding: 10px 24px;
+    border-radius: 999px;
+}
+
+/* Success Confetti CSS Particles */
+.success-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 1;
+    animation: success-particle-float 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes success-particle-float {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(0.5);
+        opacity: 0;
+    }
+}
+

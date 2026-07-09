@@ -292,5 +292,162 @@ Thank you!`;
             });
         }
     }
+
+    // ==========================================================================
+    // ORAS DYNAMIC CONTACT PAGE ANIMATIONS & INTERACTIVE HANDLERS
+    // ==========================================================================
+
+    // Confetti particles generator for submit success
+    function triggerConfetti(container) {
+        const colors = ['#73060b', '#b51218', '#ffc84a', '#dff7ef', '#fff2ea'];
+        const particleCount = 45;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('success-particle');
+            
+            // Random color, shape, size
+            particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.left = '50%';
+            particle.style.top = '50%';
+            
+            // Random translation vector in coordinates
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 80 + Math.random() * 160;
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance - 40; 
+            const r = Math.random() * 360 + 180;
+            
+            particle.style.setProperty('--x', `${x}px`);
+            particle.style.setProperty('--y', `${y}px`);
+            particle.style.setProperty('--r', `${r}deg`);
+            
+            const size = 6 + Math.random() * 8;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+            
+            container.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 1800);
+        }
+    }
+
+    // Dynamic Business Hours status check
+    function updateBusinessHoursStatus() {
+        const badge = document.getElementById('hours-status-badge');
+        if (!badge) return;
+        
+        // India Standard Time (IST) is UTC + 5:30. Let's calculate the current IST time.
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const ist = new Date(utc + (3600000 * 5.5));
+        
+        const day = ist.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+        const hour = ist.getHours();
+        
+        // Mon-Sat, 9:00 AM - 6:00 PM
+        const isOpen = (day >= 1 && day <= 6) && (hour >= 9 && hour < 18);
+        
+        if (isOpen) {
+            badge.className = 'hours-status open';
+            badge.innerHTML = '<span class="status-dot active-pulse"></span>Open Now';
+        } else {
+            badge.className = 'hours-status closed';
+            badge.innerHTML = '<span class="status-dot"></span>Closed';
+        }
+    }
+    
+    updateBusinessHoursStatus();
+    // Refresh status check every 30 seconds
+    window.setInterval(updateBusinessHoursStatus, 30000);
+
+    // 3D Card Tilt Effect on Hover
+    const detailsCard = document.querySelector('.contact-details-card');
+    if (detailsCard) {
+        detailsCard.addEventListener('mousemove', (e) => {
+            const cardRect = detailsCard.getBoundingClientRect();
+            const cardWidth = cardRect.width;
+            const cardHeight = cardRect.height;
+            
+            // Mouse coordinate relative to card center
+            const mouseX = e.clientX - cardRect.left - cardWidth / 2;
+            const mouseY = e.clientY - cardRect.top - cardHeight / 2;
+            
+            // Limit rotation to max 10 degrees
+            const rotateX = -(mouseY / (cardHeight / 2)) * 10;
+            const rotateY = (mouseX / (cardWidth / 2)) * 10;
+            
+            detailsCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            detailsCard.style.boxShadow = 'var(--shadow-strong)';
+        });
+        
+        detailsCard.addEventListener('mouseleave', () => {
+            detailsCard.style.transform = 'rotateX(0deg) rotateY(0deg) translateY(0)';
+            detailsCard.style.boxShadow = 'var(--shadow-soft)';
+        });
+    }
+
+    // Distributor Form Fill Progress Tracker & Success Animation
+    const contactForm = document.getElementById('distributor-main-form');
+    const successScreen = document.getElementById('contact-success-screen');
+    const successCloseBtn = document.getElementById('success-close-btn');
+    
+    if (contactForm && successScreen) {
+        const requiredInputs = Array.from(contactForm.querySelectorAll('[required]'));
+        const progressBar = document.getElementById('form-progress');
+        const progressPercentText = document.getElementById('progress-percent');
+        
+        const updateProgress = () => {
+            if (requiredInputs.length === 0) return;
+            
+            let filledCount = 0;
+            requiredInputs.forEach(input => {
+                if (input.tagName === 'SELECT') {
+                    if (input.value !== '') filledCount++;
+                } else if (input.value.trim() !== '') {
+                    filledCount++;
+                }
+            });
+            
+            const percentage = Math.round((filledCount / requiredInputs.length) * 100);
+            if (progressBar) progressBar.style.width = `${percentage}%`;
+            if (progressPercentText) progressPercentText.textContent = `${percentage}%`;
+            
+            if (progressPercentText) {
+                if (percentage === 100) {
+                    progressPercentText.style.color = '#0d9488';
+                } else {
+                    progressPercentText.style.color = 'var(--red-700)';
+                }
+            }
+        };
+        
+        requiredInputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+            input.addEventListener('change', updateProgress);
+        });
+        
+        updateProgress();
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formCard = document.querySelector('.contact-form-card');
+            triggerConfetti(formCard);
+            
+            successScreen.classList.add('show');
+        });
+        
+        if (successCloseBtn) {
+            successCloseBtn.addEventListener('click', () => {
+                successScreen.classList.remove('show');
+                contactForm.reset();
+                updateProgress();
+            });
+        }
+    }
 });
 
