@@ -520,7 +520,7 @@ Thank you!`;
                 name: "Rabadi Matka",
                 category: "kulfi",
                 size: "Matka Cup",
-                image: "images/product/rabdi.png",
+                image: "images/rabdi2.png",
                 description: "Traditional clay-pot kulfi with thick rabadi and aromatic dry fruits.",
                 tag: "Best Seller"
             },
@@ -541,7 +541,8 @@ Thank you!`;
                 size: "80ml",
                 image: "images/butterscoach cone.png",
                 description: "Sweet butterscotch ice cream with crunchies in a crispy waffle cone.",
-                tag: "Popular"
+                tag: "Popular",
+                bgClass: "bg-grey"
             },
             {
                 id: "cone-chocolate-80",
@@ -550,7 +551,8 @@ Thank you!`;
                 size: "80ml",
                 image: "images/chocolate cone.png",
                 description: "Rich, deep chocolate ice cream loaded inside a crispy chocolate waffle cone.",
-                tag: "Choco Classic"
+                tag: "Choco Classic",
+                bgClass: "bg-grey"
             },
             {
                 id: "cone-butterscotch-110",
@@ -559,7 +561,8 @@ Thank you!`;
                 size: "110ml",
                 image: "images/butterscoach cone.png",
                 description: "Extra large crispy waffle cone packed with butterscotch ice cream and nuts.",
-                tag: "Large Pack"
+                tag: "Large Pack",
+                bgClass: "bg-grey"
             },
             {
                 id: "cone-chocolate-110",
@@ -568,7 +571,8 @@ Thank you!`;
                 size: "110ml",
                 image: "images/chocolate cone.png",
                 description: "Extra large cone loaded with double chocolate premium ice cream and choco chips.",
-                tag: "Large Pack"
+                tag: "Large Pack",
+                bgClass: "bg-grey"
             },
             // Cup
             {
@@ -576,7 +580,7 @@ Thank you!`;
                 name: "Vanilla 65ml",
                 category: "cup",
                 size: "65ml",
-                image: "images/no iamge .png",
+                image: "images/vanilla.png",
                 description: "Classic creamy vanilla ice cream, perfect for a quick, mess-free dessert.",
                 tag: "Single Serve"
             },
@@ -585,7 +589,7 @@ Thank you!`;
                 name: "Vanilla 100ml",
                 category: "cup",
                 size: "100ml",
-                image: "images/no iamge .png",
+                image: "images/vanilla.png",
                 description: "Rich, smooth, and classic vanilla made extra creamy for pure satisfaction.",
                 tag: "Popular"
             },
@@ -594,18 +598,20 @@ Thank you!`;
                 name: "Strawberry 100ml",
                 category: "cup",
                 size: "100ml",
-                image: "images/no iamge .png",
+                image: "images/stwawberry.png",
                 description: "Delightful pink strawberry scoop filled with sweet, fruity flavor.",
-                tag: "Fruity"
+                tag: "Fruity",
+                bgClass: "bg-grey"
             },
             {
                 id: "cup-mango-100",
                 name: "Mango 100ml",
                 category: "cup",
                 size: "100ml",
-                image: "images/no iamge .png",
+                image: "images/mango cup.png",
                 description: "Refreshing mango ice cream made with real Alphonso mango pulp.",
-                tag: "Seasonal Hit"
+                tag: "Seasonal Hit",
+                bgClass: "bg-grey"
             },
             {
                 id: "cup-american-nuts-100",
@@ -648,9 +654,10 @@ Thank you!`;
                 name: "Kesar Pista 110ml",
                 category: "cup",
                 size: "110ml",
-                image: "images/no iamge .png",
+                image: "images/KESAR PISTA.png",
                 description: "Traditional saffron and cardamom ice cream garnished with real green pistachios.",
-                tag: "Royal"
+                tag: "Royal",
+                bgClass: "bg-grey"
             },
             // Family Pack
             {
@@ -713,7 +720,7 @@ Thank you!`;
                 name: "Vanilla",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/product/5ltr.png",
+                image: "images/vnilla.png",
                 description: "All-time classic smooth vanilla ice cream, ideal for caterers, parties, and weddings.",
                 tag: "Bulk Value"
             },
@@ -722,7 +729,7 @@ Thank you!`;
                 name: "Butterscotch",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
+                image: "images/BUTTERSCOCH.png",
                 description: "Creamy butterscotch bulk tub packed with crunchy, caramelized butterscotch nuts.",
                 tag: "Bulk Best Seller"
             },
@@ -731,7 +738,7 @@ Thank you!`;
                 name: "Oreo Cookies & Cream",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
+                image: "images/COOKIES AND CREAM.png",
                 description: "Smooth cream-based ice cream loaded with crunchy chocolate cookie pieces.",
                 tag: "Trendsetter"
             },
@@ -740,7 +747,7 @@ Thank you!`;
                 name: "Gulkand",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/gulkand .png",
+                image: "images/glkand.png",
                 description: "Rich, floral rose petal preserve (Gulkand) ice cream with traditional fragrance.",
                 tag: "Unique"
             },
@@ -767,7 +774,7 @@ Thank you!`;
                 name: "Mango",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
+                image: "images/mango.png",
                 description: "Tropical premium mango dessert with pure fruit pulp, thick and creamy.",
                 tag: "Fruity"
             },
@@ -776,7 +783,7 @@ Thank you!`;
                 name: "Mawa Malai",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
+                image: "images/MAWA MALI.png",
                 description: "Traditional slow-boiled milk cream flavor with dry fruits and mawa essence.",
                 tag: "Heritage"
             },
@@ -952,7 +959,7 @@ Please share the wholesale pricing, minimum order quantities, and distributor de
                                           prod.category.charAt(0).toUpperCase() + prod.category.slice(1);
                     return `
                         <article class="product-card scroll-reveal visible" data-category="${prod.category}">
-                            <div class="product-card-img-wrapper">
+                            <div class="product-card-img-wrapper ${prod.bgClass || ''}">
                                 <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='images/product/vn.png';">
                             </div>
                             <div class="product-card-info">

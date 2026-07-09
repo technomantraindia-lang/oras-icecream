@@ -4075,11 +4075,15 @@ body.loader-active {
     position: relative;
     height: 240px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--cream-100) 0%, var(--cream-200) 100%);
+    background: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+
+.product-card-img-wrapper.bg-grey {
+    background: #e3e3e3;
 }
 
 .product-card-img-wrapper img {
