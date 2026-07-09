@@ -449,5 +449,601 @@ Thank you!`;
             });
         }
     }
+
+    // ==========================================================================
+    // ORAS DYNAMIC PRODUCTS PAGE LOGIC
+    // ==========================================================================
+    const productsGrid = document.getElementById('products-grid');
+    
+    if (productsGrid) {
+        // Products Database
+        const productsList = [
+            // Candy
+            {
+                id: "candy-mango-dolly",
+                name: "Mango Dolly",
+                category: "candy",
+                size: "1 Unit",
+                image: "images/product/magno dolly.png",
+                description: "Fun, icy, and refreshing mango treat on a stick to sweeten your sunny days.",
+                tag: "Classic"
+            },
+            // Chocobar
+            {
+                id: "chocobar-mini",
+                name: "Mini Chocobar",
+                category: "chocobar",
+                size: "Mini",
+                image: "images/chcoc bar .jpeg",
+                description: "Bite-sized rich vanilla ice cream coated in a crisp chocolate shell.",
+                tag: "Popular"
+            },
+            {
+                id: "chocobar-large",
+                name: "Large Chocobar",
+                category: "chocobar",
+                size: "Regular",
+                image: "images/chcoc bar .jpeg",
+                description: "Classic creamy vanilla ice cream dipped in a thick, crackling chocolate coating.",
+                tag: "Classic"
+            },
+            {
+                id: "chocobar-crave",
+                name: "Choco Crave",
+                category: "chocobar",
+                size: "Premium",
+                image: "images/product/chobar.png",
+                description: "Double chocolate delight with rich chocolate ice cream and premium cocoa coating.",
+                tag: "Premium"
+            },
+            // Kulfi
+            {
+                id: "kulfi-mawa-malai",
+                name: "Mawa Malai Kulfi",
+                category: "kulfi",
+                size: "Stick",
+                image: "images/punjabi mawa.png",
+                description: "Traditional, slow-churned Indian dessert infused with rich mawa and cardamom.",
+                tag: "Desi Classic"
+            },
+            {
+                id: "kulfi-punjabi-mawa",
+                name: "Punjabi Mawa",
+                category: "kulfi",
+                size: "Slice/Roll",
+                image: "images/punjabi mawa.png",
+                description: "A rich Punjabi style malai kulfi packed with dried fruits and saffron.",
+                tag: "Rich Taste"
+            },
+            {
+                id: "kulfi-rabadi-matka",
+                name: "Rabadi Matka",
+                category: "kulfi",
+                size: "Matka Cup",
+                image: "images/product/rabdi.png",
+                description: "Traditional clay-pot kulfi with thick rabadi and aromatic dry fruits.",
+                tag: "Best Seller"
+            },
+            // Cone
+            {
+                id: "cone-choco-vanilla-50",
+                name: "Choco Vanilla 50ml",
+                category: "cone",
+                size: "50ml",
+                image: "images/product/cone.png",
+                description: "Crispy waffle cone loaded with smooth vanilla ice cream and chocolate swirl.",
+                tag: "Classic"
+            },
+            {
+                id: "cone-butterscotch-80",
+                name: "Butterscotch 80ml",
+                category: "cone",
+                size: "80ml",
+                image: "images/butterscoach cone.png",
+                description: "Sweet butterscotch ice cream with crunchies in a crispy waffle cone.",
+                tag: "Popular"
+            },
+            {
+                id: "cone-chocolate-80",
+                name: "Chocolate 80ml",
+                category: "cone",
+                size: "80ml",
+                image: "images/chocolate cone.png",
+                description: "Rich, deep chocolate ice cream loaded inside a crispy chocolate waffle cone.",
+                tag: "Choco Classic"
+            },
+            {
+                id: "cone-butterscotch-110",
+                name: "Butterscotch 110ml",
+                category: "cone",
+                size: "110ml",
+                image: "images/butterscoach cone.png",
+                description: "Extra large crispy waffle cone packed with butterscotch ice cream and nuts.",
+                tag: "Large Pack"
+            },
+            {
+                id: "cone-chocolate-110",
+                name: "Chocolate 110ml",
+                category: "cone",
+                size: "110ml",
+                image: "images/chocolate cone.png",
+                description: "Extra large cone loaded with double chocolate premium ice cream and choco chips.",
+                tag: "Large Pack"
+            },
+            // Cup
+            {
+                id: "cup-vanilla-65",
+                name: "Vanilla 65ml",
+                category: "cup",
+                size: "65ml",
+                image: "images/no iamge .png",
+                description: "Classic creamy vanilla ice cream, perfect for a quick, mess-free dessert.",
+                tag: "Single Serve"
+            },
+            {
+                id: "cup-vanilla-100",
+                name: "Vanilla 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/no iamge .png",
+                description: "Rich, smooth, and classic vanilla made extra creamy for pure satisfaction.",
+                tag: "Popular"
+            },
+            {
+                id: "cup-strawberry-100",
+                name: "Strawberry 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/no iamge .png",
+                description: "Delightful pink strawberry scoop filled with sweet, fruity flavor.",
+                tag: "Fruity"
+            },
+            {
+                id: "cup-mango-100",
+                name: "Mango 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/no iamge .png",
+                description: "Refreshing mango ice cream made with real Alphonso mango pulp.",
+                tag: "Seasonal Hit"
+            },
+            {
+                id: "cup-american-nuts-100",
+                name: "American Nuts 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/product/americanuts cup.jpeg",
+                description: "Creamy vanilla base loaded with roasted nuts, almonds, and colourful jelly chunks.",
+                tag: "Premium"
+            },
+            {
+                id: "cup-choco-chips-100",
+                name: "Chocolate Chips 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/product/chocolate cup.jpeg",
+                description: "Rich cocoa ice cream loaded with crunchy dark chocolate chips.",
+                tag: "Best Seller"
+            },
+            {
+                id: "cup-butterscotch-100",
+                name: "Butterscotch 100ml",
+                category: "cup",
+                size: "100ml",
+                image: "images/product/butterscoh cup.jpeg",
+                description: "Caramel-infused butterscotch scoop with buttery caramelized cashew crunchies.",
+                tag: "Classic"
+            },
+            {
+                id: "cup-rajbhog-110",
+                name: "Rajbhog 110ml",
+                category: "cup",
+                size: "110ml",
+                image: "images/product/5litre.jpeg",
+                description: "Royal saffron-flavored ice cream with a rich mix of nuts, almonds, and cardamoms.",
+                tag: "Royal"
+            },
+            {
+                id: "cup-kesar-pista-110",
+                name: "Kesar Pista 110ml",
+                category: "cup",
+                size: "110ml",
+                image: "images/no iamge .png",
+                description: "Traditional saffron and cardamom ice cream garnished with real green pistachios.",
+                tag: "Royal"
+            },
+            // Family Pack
+            {
+                id: "family-vanilla",
+                name: "Vanilla",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/vn.png",
+                description: "Classic creamy vanilla ice cream, perfect for sharing or pairing with gulab jamun.",
+                tag: "Classic"
+            },
+            {
+                id: "family-butterscotch",
+                name: "Butterscotch",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/btr.png",
+                description: "Premium butterscotch ice cream with caramelized crunchies and caramel drizzle.",
+                tag: "Best Seller"
+            },
+            {
+                id: "family-paanmasala",
+                name: "Paan Masala",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/pan ice.png",
+                description: "A refreshing sweet blend of betel leaf extract, gulkand, fennel, and spices.",
+                tag: "Traditional"
+            },
+            {
+                id: "family-chocochips",
+                name: "Chocolate Chips",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/choco.png",
+                description: "Deep cocoa ice cream loaded with crunchy, premium dark chocolate chips.",
+                tag: "Choco Premium"
+            },
+            {
+                id: "family-americannuts",
+                name: "American Nuts",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/an.png",
+                description: "Creamy ice cream loaded with roasted almonds, cashews, pistachios, and jelly bits.",
+                tag: "Rich Medley"
+            },
+            {
+                id: "family-kesarpista",
+                name: "Kesar Pista",
+                category: "family",
+                size: "Family Pack",
+                image: "images/product/kp.png",
+                description: "Traditional saffron ice cream infused with rich roasted pistachios and cardamom.",
+                tag: "Royal"
+            },
+            // 5 Litre Bulk Packs (20 flavors)
+            {
+                id: "bulk-vanilla",
+                name: "Vanilla",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/product/5ltr.png",
+                description: "All-time classic smooth vanilla ice cream, ideal for caterers, parties, and weddings.",
+                tag: "Bulk Value"
+            },
+            {
+                id: "bulk-butterscotch",
+                name: "Butterscotch",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Creamy butterscotch bulk tub packed with crunchy, caramelized butterscotch nuts.",
+                tag: "Bulk Best Seller"
+            },
+            {
+                id: "bulk-oreo-cookies",
+                name: "Oreo Cookies & Cream",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Smooth cream-based ice cream loaded with crunchy chocolate cookie pieces.",
+                tag: "Trendsetter"
+            },
+            {
+                id: "bulk-gulkand",
+                name: "Gulkand",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/gulkand .png",
+                description: "Rich, floral rose petal preserve (Gulkand) ice cream with traditional fragrance.",
+                tag: "Unique"
+            },
+            {
+                id: "bulk-pan-masala",
+                name: "Pan Masala",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Distributor favorite pan masala flavor blended with sweet fennel, mukhwas, and gulkand.",
+                tag: "Traditional"
+            },
+            {
+                id: "bulk-choco-chips",
+                name: "Chocolate Chips",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/chocolate 5 litre.png",
+                description: "Rich chocolate ice cream packed with a double dose of dark chocolate chips.",
+                tag: "Choco Premium"
+            },
+            {
+                id: "bulk-mango",
+                name: "Mango",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Tropical premium mango dessert with pure fruit pulp, thick and creamy.",
+                tag: "Fruity"
+            },
+            {
+                id: "bulk-mawa-malai",
+                name: "Mawa Malai",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Traditional slow-boiled milk cream flavor with dry fruits and mawa essence.",
+                tag: "Heritage"
+            },
+            {
+                id: "bulk-tender-coconut",
+                name: "Tender Coconut",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Exquisite creamy ice cream loaded with real soft tender coconut chunks.",
+                tag: "Fresh Flavor"
+            },
+            {
+                id: "bulk-strawberry",
+                name: "Strawberry",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Sweet, classic strawberry bulk pack with smooth cream texture.",
+                tag: "Classic"
+            },
+            {
+                id: "bulk-sitafal",
+                name: "Sitafal",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Rich custard apple pulpy ice cream capturing the sweet, creamy fruit taste.",
+                tag: "Exotic"
+            },
+            {
+                id: "bulk-american-dry-fruits",
+                name: "American Dry Fruits",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Creamy base loaded with almonds, cashews, raisins, and exotic dry fruits.",
+                tag: "Premium"
+            },
+            {
+                id: "bulk-kesar-pista",
+                name: "Kesar Pista",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Rich royal saffron milk blend with real roasted pistachios and almond pieces.",
+                tag: "Royal"
+            },
+            {
+                id: "bulk-dry-fruits-overload",
+                name: "Dry Fruits Overload",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Exquisite dessert overloaded with pistachios, almonds, cashews, and walnuts.",
+                tag: "Rich & Premium"
+            },
+            {
+                id: "bulk-guwava",
+                name: "Guava",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Authentic pink guava flavor, sweet and refreshing.",
+                tag: "Fruity Exotic"
+            },
+            {
+                id: "bulk-rajbhog",
+                name: "Rajbhog",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "A combination of saffron, cardamom, and thick rasgulla chunks inside premium cream.",
+                tag: "Royal Heritage"
+            },
+            {
+                id: "bulk-kesar-malai",
+                name: "Kesar Malai",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Decadent kesar malai blend made extra rich and creamy with saffron extract.",
+                tag: "Rich Taste"
+            },
+            {
+                id: "bulk-jamun",
+                name: "Jamun",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Unique, deep purple jamun ice cream with real pulp, sweet and tart.",
+                tag: "Fruity Exotic"
+            },
+            {
+                id: "bulk-lotus-biscoff",
+                name: "Lotus Biscoff",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Trendy flavor with speculoos cookie butter swirl and crunchy Biscoff crumbs.",
+                tag: "New Launch"
+            },
+            {
+                id: "bulk-blueberry",
+                name: "Blueberry",
+                category: "bulk",
+                size: "5 Litre Tub",
+                image: "images/no iamge .png",
+                description: "Rich, creamy vanilla-blueberry swirl loaded with sweet blueberry compote.",
+                tag: "Fruity Hits"
+            }
+        ];
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        const searchInput = document.getElementById('products-search-input');
+        const searchClearBtn = document.getElementById('products-search-clear');
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const filteredCountEl = document.getElementById('filtered-count');
+        const totalCountEl = document.getElementById('total-count');
+        const noProductsAlert = document.getElementById('no-products-alert');
+        const resetFiltersBtn = document.getElementById('reset-filters-btn');
+
+        // Set total count
+        if (totalCountEl) {
+            totalCountEl.textContent = productsList.length;
+        }
+
+        // WhatsApp redirect helper for card inquiry
+        window.inquireProductWhatsApp = function(productName, size) {
+            const phone = "919672334414";
+            const message = `👋 Hello ORAS Ice Cream Team,
+
+I am interested in becoming a partner/distributor and would like to inquire about the following product format:
+
+🍨 *Product:* ${productName}
+📦 *Format/Size:* ${size}
+
+Please share the wholesale pricing, minimum order quantities, and distributor details. Thank you!`;
+            const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        };
+
+        // Render products grid
+        const renderProducts = () => {
+            // Filter by category and search
+            const filteredProducts = productsList.filter(prod => {
+                const matchesCategory = activeCategory === 'all' || prod.category === activeCategory;
+                const matchesSearch = prod.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                     prod.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                     prod.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            // Update count indicator
+            if (filteredCountEl) {
+                filteredCountEl.textContent = filteredProducts.length;
+            }
+
+            // Show empty state if nothing matches
+            if (filteredProducts.length === 0) {
+                productsGrid.style.display = 'none';
+                if (noProductsAlert) noProductsAlert.style.display = 'block';
+            } else {
+                productsGrid.style.display = 'grid';
+                if (noProductsAlert) noProductsAlert.style.display = 'none';
+
+                // Build HTML structure dynamically
+                productsGrid.innerHTML = filteredProducts.map(prod => {
+                    const categoryLabel = prod.category === 'bulk' ? '5 Litre Pack' : 
+                                          prod.category === 'family' ? 'Family Pack' : 
+                                          prod.category.charAt(0).toUpperCase() + prod.category.slice(1);
+                    return `
+                        <article class="product-card scroll-reveal visible" data-category="${prod.category}">
+                            <div class="product-card-img-wrapper">
+                                <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='images/product/vn.png';">
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-card-meta">
+                                    <span class="product-card-category">${categoryLabel}</span>
+                                </div>
+                                <h3>${prod.name}</h3>
+                                <p class="product-card-desc">${prod.description}</p>
+                                <div class="product-card-action">
+                                    <button onclick="inquireProductWhatsApp('${prod.name}', '${prod.size}')" class="btn-card-inquire" aria-label="Inquire about ${prod.name}">
+                                        <i class="fa-brands fa-whatsapp"></i> Inquire Wholesale
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+        };
+
+        // Select Category Pill function
+        const selectCategory = (category) => {
+            activeCategory = category;
+            filterPills.forEach(pill => {
+                pill.classList.toggle('active', pill.dataset.category === category);
+            });
+            renderProducts();
+        };
+
+        // Parse query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryCategory = urlParams.get('category');
+        if (queryCategory) {
+            // Find pill matching query
+            const validCategories = ['candy', 'chocobar', 'kulfi', 'cone', 'cup', 'family', 'bulk'];
+            if (validCategories.includes(queryCategory)) {
+                selectCategory(queryCategory);
+            } else {
+                renderProducts();
+            }
+        } else {
+            renderProducts();
+        }
+
+        // Add event listeners for pills
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                selectCategory(pill.dataset.category || 'all');
+            });
+        });
+
+        // Search inputs event listeners
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                if (searchClearBtn) {
+                    if (searchQuery.trim().length > 0) {
+                        searchClearBtn.classList.add('visible');
+                    } else {
+                        searchClearBtn.classList.remove('visible');
+                    }
+                }
+                renderProducts();
+            });
+        }
+
+        // Search clear button
+        if (searchClearBtn && searchInput) {
+            searchClearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                searchQuery = '';
+                searchClearBtn.classList.remove('visible');
+                renderProducts();
+                searchInput.focus();
+            });
+        }
+
+        // Reset button in empty alert state
+        if (resetFiltersBtn) {
+            resetFiltersBtn.addEventListener('click', () => {
+                if (searchInput) {
+                    searchInput.value = '';
+                }
+                searchQuery = '';
+                if (searchClearBtn) {
+                    searchClearBtn.classList.remove('visible');
+                }
+                selectCategory('all');
+            });
+        }
+    }
 });
+
 

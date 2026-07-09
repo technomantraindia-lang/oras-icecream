@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us & Distributor Application | ORAS Ice Cream</title>
+    <title>Our Products | ORAS Ice Cream | Indulgence in Every Scoop</title>
     <meta name="description"
-        content="Contact ORAS Ice Cream. Submit your distributor application, find our factory coordinates in Kota, and get in touch with our team directly.">
+        content="Browse the complete collection of ORAS Ice Creams. Filter through Candy, Chocobars, Kulfi, Cones, Cups, Family Packs, and 5 Litre bulk tubs to find your perfect flavor.">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
             <div class="swirl swirl-2"></div>
         </div>
         <div class="preloader-content">
+            <!-- Center Ice Cream Cup SVG Animation -->
             <div class="icecream-container">
                 <svg viewBox="0 0 200 200" class="icecream-svg">
                     <circle cx="50" cy="60" r="4" class="topping topping-dot topping-1" />
@@ -32,11 +33,13 @@
                     <circle cx="150" cy="95" r="3.5" class="topping topping-dot topping-3" />
                     <rect x="40" y="110" width="6" height="6" rx="2" class="topping topping-chip topping-4" />
 
+                    <!-- Ice Cream Scoop dropping -->
                     <g class="icecream-scoop-group">
                         <circle cx="100" cy="-60" r="42" class="icecream-scoop" />
                         <path d="M 62,-54 C 65,-40 75,-35 80,-42 C 85,-50 95,-38 100,-46 C 105,-54 115,-36 122,-44 C 129,-52 135,-38 138,-54 C 135,-78 120,-96 100,-96 C 80,-96 65,-78 62,-54 Z" class="syrup-drizzle" />
                     </g>
 
+                    <!-- Cup container -->
                     <g class="icecream-cup-group">
                         <ellipse cx="100" cy="110" rx="46" ry="12" class="cup-rim-back" />
                         <path d="M 58,114 L 68,168 C 69,173 73,178 78,178 L 122,178 C 127,178 131,173 132,168 L 142,114 Z" class="cup-body" />
@@ -46,11 +49,13 @@
                 </svg>
             </div>
 
+            <!-- Preloader Progress -->
             <div class="preloader-progress-bar">
                 <div class="progress-line-fill"></div>
                 <div class="progress-syrup-drop"></div>
             </div>
 
+            <!-- Reveal ORAS Logo text -->
             <div class="preloader-logo-reveal">
                 <h1 class="loader-logo-text">ORAS</h1>
                 <span class="loader-logo-sub">EST. 2018</span>
@@ -70,8 +75,8 @@
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="index.html#services">Service</a></li>
-                    <li><a href="products.html">Product</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="products.html" class="active">Product</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -85,180 +90,78 @@
     </header>
 
     <main>
-        <!-- Contact Page Hero Section -->
-        <section class="contact-hero">
-            <div class="floating-sweets-container">
-                <i class="fa-solid fa-ice-cream floating-sweet floating-sweet-1"></i>
-                <i class="fa-solid fa-cookie floating-sweet floating-sweet-2"></i>
-                <i class="fa-solid fa-ice-cream floating-sweet floating-sweet-3"></i>
-                <i class="fa-solid fa-cookie-bite floating-sweet floating-sweet-4"></i>
-            </div>
+        <!-- Products Hero Section -->
+        <section class="products-hero-section">
             <div class="shell">
-                <h1>Connect With ORAS</h1>
-                <p>Have questions about distributor partnerships or our premium frozen desserts? Our team is here to help you get started.</p>
+                <span class="eyebrow"><i class="fa-solid fa-ice-cream"></i> Our Collection</span>
+                <h1>Crafted For Every Craving</h1>
+                <p>Discover our complete menu of premium frozen treats, from quick single-serve sticks to large party-sized tubs. Filter by category or search for your favorite flavor below!</p>
+                
+                <!-- Search Bar Container -->
+                <div class="products-search-container scroll-reveal">
+                    <div class="search-box-glow"></div>
+                    <div class="products-search-box">
+                        <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                        <input type="text" id="products-search-input" placeholder="Search for 'vanilla', 'chocobar', 'kulfi'..." aria-label="Search ice cream flavors">
+                        <button id="products-search-clear" class="search-clear-btn" aria-label="Clear search">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Main Form & Details Section -->
-        <section id="contact-section" class="contact-section">
+        <!-- Category Tags Filter Section -->
+        <section class="products-filter-section">
             <div class="shell">
-                <div class="section-intro scroll-reveal">
-                    <span class="eyebrow">Partnership Opportunity</span>
-                    <h2>Start Your Journey with ORAS</h2>
-                    <p>Apply to become an authorized distributor and help us bring frozen happiness to communities in your region.</p>
+                <div class="filter-pills-wrapper">
+                    <button class="filter-pill active" data-category="all">
+                        <i class="fa-solid fa-ice-cream"></i> All Products
+                    </button>
+                    <button class="filter-pill" data-category="candy">
+                        <i class="fa-solid fa-seedling"></i> Candy
+                    </button>
+                    <button class="filter-pill" data-category="chocobar">
+                        <i class="fa-solid fa-cube"></i> Chocobar
+                    </button>
+                    <button class="filter-pill" data-category="kulfi">
+                        <i class="fa-solid fa-glass-water"></i> Kulfi
+                    </button>
+                    <button class="filter-pill" data-category="cone">
+                        <i class="fa-solid fa-ice-cream"></i> Cone
+                    </button>
+                    <button class="filter-pill" data-category="cup">
+                        <i class="fa-solid fa-bowl-food"></i> Cup
+                    </button>
+                    <button class="filter-pill" data-category="family">
+                        <i class="fa-solid fa-people-group"></i> Family Pack
+                    </button>
+                    <button class="filter-pill" data-category="bulk">
+                        <i class="fa-solid fa-boxes-stacked"></i> 5 Litre Pack
+                    </button>
+                </div>
+                
+                <div class="active-filter-indicator">
+                    Showing <span id="filtered-count">0</span> of <span id="total-count">0</span> products
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="products-grid-section">
+            <div class="shell">
+                <!-- Products Grid -->
+                <div id="products-grid" class="products-grid">
+                    <!-- Cards will be dynamically injected here by Javascript -->
                 </div>
 
-                <div class="contact-layout">
-                    <!-- Left: Contact Form Card (Takes 1.2fr of width) -->
-                    <div class="contact-form-card">
-                        <!-- Custom Form Fill Progress Tracker -->
-                        <div class="form-progress-header">
-                            <span>Form Completion</span>
-                            <span id="progress-percent" class="form-progress-percentage">0%</span>
-                        </div>
-                        <div class="form-progress-container">
-                            <div id="form-progress" class="form-progress-bar"></div>
-                        </div>
-
-                        <!-- Main Form Element -->
-                        <form id="distributor-main-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-name">Name</label>
-                                    <input type="text" id="distributor-name" placeholder="Enter your full name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-mobile">Mobile Number</label>
-                                    <input type="tel" id="distributor-mobile" placeholder="Enter mobile number" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-whatsapp">WhatsApp Number</label>
-                                    <input type="tel" id="distributor-whatsapp" placeholder="Enter WhatsApp number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-email">Email (Optional)</label>
-                                    <input type="email" id="distributor-email" placeholder="Enter email address">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-state">State</label>
-                                    <input type="text" id="distributor-state" placeholder="Enter your state" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-district">District</label>
-                                    <input type="text" id="distributor-district" placeholder="Enter your district" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-city">City</label>
-                                    <input type="text" id="distributor-city" placeholder="Enter your city" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-business">Current Business</label>
-                                    <input type="text" id="distributor-business" placeholder="e.g. Retail shop, FMCG distributor" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-coldstorage">Cold Storage Available?</label>
-                                    <select id="distributor-coldstorage" required>
-                                        <option value="" disabled selected>Select Yes / No</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-deliveryvehicle">Delivery Vehicle Available?</label>
-                                    <select id="distributor-deliveryvehicle" required>
-                                        <option value="" disabled selected>Select Yes / No</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-investment">Investment Capacity</label>
-                                    <input type="text" id="distributor-investment" placeholder="e.g. Rs. 5 Lakhs" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-expectedbusiness">Expected Monthly Business</label>
-                                    <input type="text" id="distributor-expectedbusiness" placeholder="e.g. Rs. 2 Lakhs" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="distributor-message">Message</label>
-                                <textarea id="distributor-message" rows="5" placeholder="Tell us more about your business experience or market area..." required></textarea>
-                            </div>
-                            <div class="contact-form-actions" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
-                                <button type="submit" class="btn btn-dark submit-contact-btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
-                                <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp submit-contact-btn">Apply via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
-                            </div>
-                        </form>
-
-                        <!-- Custom Dynamic Form Success Screen Overlay -->
-                        <div id="contact-success-screen" class="success-overlay">
-                            <div class="success-icon-wrapper">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <h3 class="success-title">Application Received!</h3>
-                            <p class="success-text">Thank you for submitting your Distributor Application! Our partnership team will review your application and contact you shortly.</p>
-                            <button type="button" id="success-close-btn" class="btn btn-dark success-overlay-close-btn">Close Form</button>
-                        </div>
-                    </div>
-
-                    <!-- Right: Contact Info and Interactive Widgets (Takes 0.8fr of width) -->
-                    <div style="display: flex; flex-direction: column; width: 100%;">
-                        <div class="perspective-container">
-                            <div class="contact-details-card">
-                                <div class="details-branding">
-                                    <img src="images/logo.png" alt="ORAS Logo" class="details-logo">
-                                    <h3>ORAS Ice Cream</h3>
-                                    <p>Crafting frozen happiness since 2018.</p>
-                                </div>
-                                <hr class="details-divider">
-                                <ul class="details-info-list">
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-phone"></i></div>
-                                        <div>
-                                            <strong>Phone</strong>
-                                            <a href="tel:+919672334414">+91 96723 34414</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-envelope"></i></div>
-                                        <div>
-                                            <strong>Email Address</strong>
-                                            <a href="mailto:orasinfo214@gmail.com">orasinfo214@gmail.com</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-location-dot"></i></div>
-                                        <div>
-                                            <strong>Factory Address</strong>
-                                            <span>H-1, 214, Agro Food Park Second, RIICO Ranpur, Kota, Rajasthan - 325003</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Google Maps Embed Card -->
-                        <div class="map-mockup-card" style="height: 300px;">
-                            <iframe 
-                                src="https://maps.google.com/maps?q=H-1%20214%20Agro%20Food%20Park%20Second%20RIICO%20Ranpur%20Kota%20Rajasthan%20325003&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0; display: block;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+                <!-- No Products Found state -->
+                <div id="no-products-alert" class="no-products-alert" style="display: none;">
+                    <div class="alert-content">
+                        <i class="fa-solid fa-face-frown-open alert-icon"></i>
+                        <h3>No Flavours Found</h3>
+                        <p>We couldn't find any products matching your current search or category selections. Try adjusting your terms or resetting the filter.</p>
+                        <button id="reset-filters-btn" class="btn btn-dark">Reset Filter &amp; Search</button>
                     </div>
                 </div>
             </div>
@@ -266,7 +169,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="main-footer">
+    <footer class="main-footer">
         <div class="shell footer-grid">
             <div class="footer-brand">
                 <img src="images/logo.png" alt="ORAS Logo" class="footer-logo">
