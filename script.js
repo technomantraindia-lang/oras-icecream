@@ -260,9 +260,20 @@ Thank you!`;
 
         // Close panel when clicking outside
         document.addEventListener('click', (e) => {
-            if (!waFlowPanel.contains(e.target) && e.target !== waFlowBtn && !waFlowBtn.contains(e.target)) {
+            const isPartnerBtn = e.target.classList.contains('btn-quote') || e.target.closest('.btn-quote');
+            if (!waFlowPanel.contains(e.target) && e.target !== waFlowBtn && !waFlowBtn.contains(e.target) && !isPartnerBtn) {
                 waFlowPanel.classList.remove('open');
             }
+        });
+
+        // Intercept "Become a Partner" buttons to show the popup form
+        document.querySelectorAll('.btn-quote').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                waFlowPanel.classList.add('open');
+                document.getElementById('wa-name')?.focus();
+            });
         });
 
         // Form submit inside panel
@@ -483,7 +494,7 @@ Thank you!`;
                 name: "Large Chocobar",
                 category: "chocobar",
                 size: "Regular",
-                image: "images/chcoc bar .jpeg",
+                image: "images/big chcoc bar.png",
                 description: "Classic creamy vanilla ice cream dipped in a thick, crackling chocolate coating.",
                 tag: "Classic"
             },
@@ -511,8 +522,8 @@ Thank you!`;
                 name: "Punjabi Mawa",
                 category: "kulfi",
                 size: "Slice/Roll",
-                image: "images/punjabi mawa.png",
-                description: "A rich Punjabi style malai kulfi packed with dried fruits and saffron.",
+                image: "images/product/MAWA KULFI.png",
+                description: "A rich Punjabi style malai kulfi.",
                 tag: "Rich Taste"
             },
             {
@@ -521,7 +532,7 @@ Thank you!`;
                 category: "kulfi",
                 size: "Matka Cup",
                 image: "images/rabdi2.png",
-                description: "Traditional clay-pot kulfi with thick rabadi and aromatic dry fruits.",
+                description: "Traditional pot kulfi with thick rabadi and aromatic dry fruits.",
                 tag: "Best Seller"
             },
             // Cone
@@ -557,7 +568,7 @@ Thank you!`;
                 name: "Butterscotch 110ml",
                 category: "cone",
                 size: "110ml",
-                image: "images/butterscoth cone.png",
+                image: "images/buuter scoch.png",
                 description: "Extra large crispy waffle cone packed with butterscotch ice cream and nuts.",
                 tag: "Large Pack"
             },
@@ -566,7 +577,7 @@ Thank you!`;
                 name: "Chocolate 110ml",
                 category: "cone",
                 size: "110ml",
-                image: "images/new chococlate.png",
+                image: "images/cohoc  big.png",
                 description: "Extra large cone loaded with double chocolate premium ice cream and choco chips.",
                 tag: "Large Pack"
             },
@@ -576,7 +587,7 @@ Thank you!`;
                 name: "Vanilla 65ml",
                 category: "cup",
                 size: "65ml",
-                image: "images/vanilla.png",
+                image: "images/product/ORAS ICECREAM.png",
                 description: "Classic creamy vanilla ice cream, perfect for a quick, mess-free dessert.",
                 tag: "Single Serve"
             },
@@ -595,7 +606,7 @@ Thank you!`;
                 category: "cup",
                 size: "100ml",
                 image: "images/new strbeery.png",
-                description: "Delightful pink strawberry scoop filled with sweet, fruity flavor.",
+                description: "Delightful pink strawberry scoop filled with sweet, fruity flavour.",
                 tag: "Fruity"
             },
             {
@@ -640,7 +651,7 @@ Thank you!`;
                 category: "cup",
                 size: "110ml",
                 image: "images/product/5litre.jpeg",
-                description: "Royal saffron-flavored ice cream with a rich mix of nuts, almonds, and cardamoms.",
+                description: "Royal saffron-flavoured ice cream with a rich mix of nuts, almonds, and cardamoms.",
                 tag: "Royal"
             },
             {

@@ -4079,7 +4079,7 @@ body.loader-active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 8px;
 }
 
 .product-card-img-wrapper.bg-grey {
@@ -4090,11 +4090,12 @@ body.loader-active {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    transform: scale(1.2);
     transition: transform 0.4s ease;
 }
 
 .product-card:hover .product-card-img-wrapper img {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.3) rotate(2deg);
 }
 
 .product-card-tag {
