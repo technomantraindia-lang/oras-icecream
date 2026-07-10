@@ -246,16 +246,55 @@ Thank you!`;
     const waFlowForm = document.getElementById('whatsapp-flow-form');
 
     if (waFlowBtn && waFlowPanel && waFlowClose) {
+        const showBackdrop = () => {
+            let backdrop = document.getElementById('modal-backdrop');
+            if (!backdrop) {
+                backdrop = document.createElement('div');
+                backdrop.id = 'modal-backdrop';
+                backdrop.style.position = 'fixed';
+                backdrop.style.inset = '0';
+                backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+                backdrop.style.backdropFilter = 'blur(4px)';
+                backdrop.style.opacity = '0';
+                backdrop.style.transition = 'opacity 0.25s ease';
+                backdrop.style.zIndex = '1499';
+                document.body.appendChild(backdrop);
+                
+                backdrop.addEventListener('click', () => {
+                    waFlowPanel.classList.remove('open');
+                    hideBackdrop();
+                });
+            }
+            backdrop.offsetHeight; // Force reflow
+            backdrop.style.opacity = '1';
+        };
+
+        const hideBackdrop = () => {
+            const backdrop = document.getElementById('modal-backdrop');
+            if (backdrop) {
+                backdrop.style.opacity = '0';
+                setTimeout(() => {
+                    backdrop.remove();
+                }, 250);
+            }
+        };
+
         // Toggle panel open/close
         waFlowBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             waFlowPanel.classList.toggle('open');
+            if (waFlowPanel.classList.contains('open')) {
+                showBackdrop();
+            } else {
+                hideBackdrop();
+            }
         });
 
         // Close panel
         waFlowClose.addEventListener('click', (e) => {
             e.stopPropagation();
             waFlowPanel.classList.remove('open');
+            hideBackdrop();
         });
 
         // Close panel when clicking outside
@@ -263,6 +302,7 @@ Thank you!`;
             const isPartnerBtn = e.target.classList.contains('btn-quote') || e.target.closest('.btn-quote');
             if (!waFlowPanel.contains(e.target) && e.target !== waFlowBtn && !waFlowBtn.contains(e.target) && !isPartnerBtn) {
                 waFlowPanel.classList.remove('open');
+                hideBackdrop();
             }
         });
 
@@ -272,6 +312,7 @@ Thank you!`;
                 e.preventDefault();
                 e.stopPropagation();
                 waFlowPanel.classList.add('open');
+                showBackdrop();
                 document.getElementById('wa-name')?.focus();
             });
         });
