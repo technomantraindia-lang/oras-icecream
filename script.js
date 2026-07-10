@@ -810,7 +810,7 @@ Thank you!`;
                 name: "Chocolate Chips",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/chocolate 5 litre.png",
+                image: "images/new choco.png",
                 description: "A rich chocolate flavour with a delicious chocolate chip-inspired experience.",
                 tag: "Choco Premium"
             },
