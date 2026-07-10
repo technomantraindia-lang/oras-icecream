@@ -721,7 +721,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/vnilla.png",
-                description: "All-time classic smooth vanilla ice cream, ideal for caterers, parties, and weddings.",
+                description: "A timeless vanilla flavour with a smooth, creamy and pleasantly sweet taste.",
                 tag: "Bulk Value"
             },
             {
@@ -730,7 +730,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/BUTTERSCOCH.png",
-                description: "Creamy butterscotch bulk tub packed with crunchy, caramelized butterscotch nuts.",
+                description: "A classic butterscotch flavour offering a rich, creamy and caramel-like taste.",
                 tag: "Bulk Best Seller"
             },
             {
@@ -739,7 +739,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/COOKIES AND CREAM.png",
-                description: "Smooth cream-based ice cream loaded with crunchy chocolate cookie pieces.",
+                description: "A popular cookies-and-cream flavour with a delicious chocolate biscuit-inspired taste.",
                 tag: "Trendsetter"
             },
             {
@@ -748,7 +748,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/glkand.png",
-                description: "Rich, floral rose petal preserve (Gulkand) ice cream with traditional fragrance.",
+                description: "A traditional gulkand-inspired flavour with a sweet, aromatic and refreshing profile.",
                 tag: "Unique"
             },
             {
@@ -756,8 +756,8 @@ Thank you!`;
                 name: "Pan Masala",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Distributor favorite pan masala flavor blended with sweet fennel, mukhwas, and gulkand.",
+                image: "images/pan masla.png",
+                description: "A distinctive pan masala-inspired flavour with a traditional and pleasantly refreshing taste.",
                 tag: "Traditional"
             },
             {
@@ -766,7 +766,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/chocolate 5 litre.png",
-                description: "Rich chocolate ice cream packed with a double dose of dark chocolate chips.",
+                description: "A rich chocolate flavour with a delicious chocolate chip-inspired experience.",
                 tag: "Choco Premium"
             },
             {
@@ -775,7 +775,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/mango.png",
-                description: "Tropical premium mango dessert with pure fruit pulp, thick and creamy.",
+                description: "A refreshing mango-inspired flavour with a sweet, tropical and creamy taste.",
                 tag: "Fruity"
             },
             {
@@ -784,7 +784,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/MAWA MALI.png",
-                description: "Traditional slow-boiled milk cream flavor with dry fruits and mawa essence.",
+                description: "A traditional mawa malai flavour with a rich, creamy and indulgent taste.",
                 tag: "Heritage"
             },
             {
@@ -792,8 +792,8 @@ Thank you!`;
                 name: "Tender Coconut",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Exquisite creamy ice cream loaded with real soft tender coconut chunks.",
+                image: "images/tender coconut.png",
+                description: "A refreshing tender coconut-inspired flavour with a light, creamy and tropical profile.",
                 tag: "Fresh Flavor"
             },
             {
@@ -801,8 +801,8 @@ Thank you!`;
                 name: "Strawberry",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Sweet, classic strawberry bulk pack with smooth cream texture.",
+                image: "images/strawberry.png",
+                description: "A classic strawberry-inspired flavour with a sweet, fruity and refreshing taste.",
                 tag: "Classic"
             },
             {
@@ -810,8 +810,8 @@ Thank you!`;
                 name: "Sitafal",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Rich custard apple pulpy ice cream capturing the sweet, creamy fruit taste.",
+                image: "images/product/sitafal.png",
+                description: "A delightful sitafal-inspired flavour with a naturally sweet and creamy taste profile.",
                 tag: "Exotic"
             },
             {
@@ -819,8 +819,8 @@ Thank you!`;
                 name: "American Dry Fruits",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Creamy base loaded with almonds, cashews, raisins, and exotic dry fruits.",
+                image: "images/american dryfrutis.png",
+                description: "A rich and indulgent dry-fruit-inspired flavour with a premium festive taste.",
                 tag: "Premium"
             },
             {
@@ -828,8 +828,8 @@ Thank you!`;
                 name: "Kesar Pista",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Rich royal saffron milk blend with real roasted pistachios and almond pieces.",
+                image: "images/kesar pista .png",
+                description: "A classic kesar pista flavour with a rich, aromatic and traditional taste.",
                 tag: "Royal"
             },
             {
@@ -837,8 +837,8 @@ Thank you!`;
                 name: "Dry Fruits Overload",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Exquisite dessert overloaded with pistachios, almonds, cashews, and walnuts.",
+                image: "images/dry frutis .png",
+                description: "An indulgent dry-fruit-inspired flavour created for a rich and premium dessert experience.",
                 tag: "Rich & Premium"
             },
             {
@@ -846,8 +846,8 @@ Thank you!`;
                 name: "Guava",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Authentic pink guava flavor, sweet and refreshing.",
+                image: "images/guava.png",
+                description: "A refreshing guava-inspired flavour with a sweet, fruity and pleasantly tropical taste.",
                 tag: "Fruity Exotic"
             },
             {
@@ -855,8 +855,8 @@ Thank you!`;
                 name: "Rajbhog",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "A combination of saffron, cardamom, and thick rasgulla chunks inside premium cream.",
+                image: "images/rajbhog.png",
+                description: "A royal Indian dessert-inspired flavour with a rich, aromatic and festive taste profile.",
                 tag: "Royal Heritage"
             },
             {
@@ -865,7 +865,7 @@ Thank you!`;
                 category: "bulk",
                 size: "5 Litre Tub",
                 image: "images/no iamge .png",
-                description: "Decadent kesar malai blend made extra rich and creamy with saffron extract.",
+                description: "A luxurious kesar malai flavour with a smooth, rich and aromatic taste.",
                 tag: "Rich Taste"
             },
             {
@@ -873,8 +873,8 @@ Thank you!`;
                 name: "Jamun",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Unique, deep purple jamun ice cream with real pulp, sweet and tart.",
+                image: "images/jamun.png",
+                description: "A distinctive jamun-inspired flavour with a fruity balance of sweetness and mild tanginess.",
                 tag: "Fruity Exotic"
             },
             {
@@ -882,8 +882,8 @@ Thank you!`;
                 name: "Lotus Biscoff",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Trendy flavor with speculoos cookie butter swirl and crunchy Biscoff crumbs.",
+                image: "images/lotusbiscoff.png",
+                description: "A rich and indulgent flavour inspired by the popular Lotus Biscoff taste profile.",
                 tag: "New Launch"
             },
             {
@@ -891,8 +891,8 @@ Thank you!`;
                 name: "Blueberry",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
-                description: "Rich, creamy vanilla-blueberry swirl loaded with sweet blueberry compote.",
+                image: "images/blueberry.png",
+                description: "A refreshing blueberry-inspired flavour with a sweet, fruity and creamy taste.",
                 tag: "Fruity Hits"
             }
         ];
