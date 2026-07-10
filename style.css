@@ -4083,7 +4083,7 @@ body.loader-active {
 }
 
 .product-card-img-wrapper.bg-grey {
-    background: #e3e3e3;
+    background: var(--white);
 }
 
 .product-card-img-wrapper img {

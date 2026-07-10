@@ -539,40 +539,36 @@ Thank you!`;
                 name: "Butterscotch 80ml",
                 category: "cone",
                 size: "80ml",
-                image: "images/butterscoach cone.png",
+                image: "images/butterscoth cone.png",
                 description: "Sweet butterscotch ice cream with crunchies in a crispy waffle cone.",
-                tag: "Popular",
-                bgClass: "bg-grey"
+                tag: "Popular"
             },
             {
                 id: "cone-chocolate-80",
                 name: "Chocolate 80ml",
                 category: "cone",
                 size: "80ml",
-                image: "images/chocolate cone.png",
+                image: "images/new chococlate.png",
                 description: "Rich, deep chocolate ice cream loaded inside a crispy chocolate waffle cone.",
-                tag: "Choco Classic",
-                bgClass: "bg-grey"
+                tag: "Choco Classic"
             },
             {
                 id: "cone-butterscotch-110",
                 name: "Butterscotch 110ml",
                 category: "cone",
                 size: "110ml",
-                image: "images/butterscoach cone.png",
+                image: "images/butterscoth cone.png",
                 description: "Extra large crispy waffle cone packed with butterscotch ice cream and nuts.",
-                tag: "Large Pack",
-                bgClass: "bg-grey"
+                tag: "Large Pack"
             },
             {
                 id: "cone-chocolate-110",
                 name: "Chocolate 110ml",
                 category: "cone",
                 size: "110ml",
-                image: "images/chocolate cone.png",
+                image: "images/new chococlate.png",
                 description: "Extra large cone loaded with double chocolate premium ice cream and choco chips.",
-                tag: "Large Pack",
-                bgClass: "bg-grey"
+                tag: "Large Pack"
             },
             // Cup
             {
@@ -598,20 +594,18 @@ Thank you!`;
                 name: "Strawberry 100ml",
                 category: "cup",
                 size: "100ml",
-                image: "images/stwawberry.png",
+                image: "images/new strbeery.png",
                 description: "Delightful pink strawberry scoop filled with sweet, fruity flavor.",
-                tag: "Fruity",
-                bgClass: "bg-grey"
+                tag: "Fruity"
             },
             {
                 id: "cup-mango-100",
                 name: "Mango 100ml",
                 category: "cup",
                 size: "100ml",
-                image: "images/mango cup.png",
+                image: "images/mango new .png",
                 description: "Refreshing mango ice cream made with real Alphonso mango pulp.",
-                tag: "Seasonal Hit",
-                bgClass: "bg-grey"
+                tag: "Seasonal Hit"
             },
             {
                 id: "cup-american-nuts-100",
@@ -654,10 +648,9 @@ Thank you!`;
                 name: "Kesar Pista 110ml",
                 category: "cup",
                 size: "110ml",
-                image: "images/KESAR PISTA.png",
+                image: "images/new ras .png",
                 description: "Traditional saffron and cardamom ice cream garnished with real green pistachios.",
-                tag: "Royal",
-                bgClass: "bg-grey"
+                tag: "Royal"
             },
             // Family Pack
             {
@@ -864,7 +857,7 @@ Thank you!`;
                 name: "Kesar Malai",
                 category: "bulk",
                 size: "5 Litre Tub",
-                image: "images/no iamge .png",
+                image: "images/kesr mali.png",
                 description: "A luxurious kesar malai flavour with a smooth, rich and aromatic taste.",
                 tag: "Rich Taste"
             },
