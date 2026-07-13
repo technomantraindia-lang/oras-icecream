@@ -3509,14 +3509,15 @@ body.loader-active {
         height: 38px !important;
     }
 
-    /* Stack footer columns into a single vertical sequence */
+    /* 1 by 2 layout for mobile: Brand spans full width, others display in 2 columns */
     .footer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px 20px !important;
     }
 
     .footer-brand {
-        grid-column: span 1 !important;
+        grid-column: span 2 !important;
+        margin-bottom: 10px;
     }
 
     /* Ensure text wraps nicely and behaves at small viewports */
