@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us & Distributor Application | ORAS Ice Cream</title>
+    <title>Our Services | ORAS Ice Cream | Premium Manufacturing & Distributorship</title>
     <meta name="description"
-        content="Contact ORAS Ice Cream. Submit your distributor application, find our factory coordinates in Kota, and get in touch with our team directly.">
+        content="Explore the premium services of ORAS Ice Cream: high-quality manufacturing, cold chain logistics, bulk supply for events, and profitable distributorship programs.">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lobster+Two:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 
 <body>
@@ -25,32 +25,43 @@
             <div class="swirl swirl-2"></div>
         </div>
         <div class="preloader-content">
+            <!-- Center Ice Cream Cup SVG Animation -->
             <div class="icecream-container">
                 <svg viewBox="0 0 200 200" class="icecream-svg">
+                    <!-- Floating toppings -->
                     <circle cx="50" cy="60" r="4" class="topping topping-dot topping-1" />
                     <rect x="145" y="45" width="6" height="6" rx="2" class="topping topping-chip topping-2" />
                     <circle cx="150" cy="95" r="3.5" class="topping topping-dot topping-3" />
                     <rect x="40" y="110" width="6" height="6" rx="2" class="topping topping-chip topping-4" />
 
+                    <!-- Ice Cream Scoop dropping -->
                     <g class="icecream-scoop-group">
                         <circle cx="100" cy="-60" r="42" class="icecream-scoop" />
+                        <!-- Strawberry Syrup Drizzle -->
                         <path d="M 62,-54 C 65,-40 75,-35 80,-42 C 85,-50 95,-38 100,-46 C 105,-54 115,-36 122,-44 C 129,-52 135,-38 138,-54 C 135,-78 120,-96 100,-96 C 80,-96 65,-78 62,-54 Z" class="syrup-drizzle" />
                     </g>
 
+                    <!-- Cup container -->
                     <g class="icecream-cup-group">
+                        <!-- Cup Back Rim -->
                         <ellipse cx="100" cy="110" rx="46" ry="12" class="cup-rim-back" />
+                        <!-- Cup Base -->
                         <path d="M 58,114 L 68,168 C 69,173 73,178 78,178 L 122,178 C 127,178 131,173 132,168 L 142,114 Z" class="cup-body" />
+                        <!-- Cup Front Rim -->
                         <ellipse cx="100" cy="110" rx="46" ry="12" class="cup-rim-front" />
+                        <!-- Golden Accent Lines on Cup -->
                         <path d="M 68,124 L 74,158 M 132,124 L 126,158 M 100,128 L 100,166" class="cup-accents" />
                     </g>
                 </svg>
             </div>
 
+            <!-- Preloader Progress -->
             <div class="preloader-progress-bar">
                 <div class="progress-line-fill"></div>
                 <div class="progress-syrup-drop"></div>
             </div>
 
+            <!-- Reveal ORAS Logo text -->
             <div class="preloader-logo-reveal">
                 <h1 class="loader-logo-text">ORAS</h1>
                 <span class="loader-logo-sub">EST. 2018</span>
@@ -69,9 +80,9 @@
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Service</a></li>
+                    <li><a href="services.html" class="active">Service</a></li>
                     <li><a href="products.html">Product</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -85,179 +96,98 @@
     </header>
 
     <main>
-        <!-- Contact Page Hero Section -->
-        <section class="contact-hero">
-            <div class="floating-sweets-container">
-                <i class="fa-solid fa-ice-cream floating-sweet floating-sweet-1"></i>
-                <i class="fa-solid fa-cookie floating-sweet floating-sweet-2"></i>
-                <i class="fa-solid fa-ice-cream floating-sweet floating-sweet-3"></i>
-                <i class="fa-solid fa-cookie-bite floating-sweet floating-sweet-4"></i>
-            </div>
-            <div class="shell">
-                <h1>Connect With ORAS</h1>
-                <p>Have questions about distributor partnerships or our premium frozen desserts? Our team is here to help you get started.</p>
+        <!-- Services Hero Section -->
+        <section id="home" class="services-hero">
+            <div class="shell services-hero-content scroll-reveal">
+                <h1>Delivering Sweet <span>Excellence</span></h1>
+                <p>We combine high-grade ingredient sourcing, temperature-controlled sub-zero logistics, and profitable business opportunities to support partners across regions.</p>
             </div>
         </section>
 
-        <!-- Main Form & Details Section -->
-        <section id="contact-section" class="contact-section">
+        <!-- Alternating Services Flow Section -->
+        <section class="services-flow-section">
             <div class="shell">
-                <div class="section-intro scroll-reveal">
-                    <span class="eyebrow">Partnership Opportunity</span>
-                    <h2>Start Your Journey with ORAS</h2>
-                    <p>Apply to become an authorized distributor and help us bring frozen happiness to communities in your region.</p>
-                </div>
-
-                <div class="contact-layout">
-                    <!-- Left: Contact Form Card (Takes 1.2fr of width) -->
-                    <div class="contact-form-card">
-                        <!-- Custom Form Fill Progress Tracker -->
-                        <div class="form-progress-header">
-                            <span>Form Completion</span>
-                            <span id="progress-percent" class="form-progress-percentage">0%</span>
-                        </div>
-                        <div class="form-progress-container">
-                            <div id="form-progress" class="form-progress-bar"></div>
-                        </div>
-
-                        <!-- Main Form Element -->
-                        <form id="distributor-main-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-name">Name</label>
-                                    <input type="text" id="distributor-name" placeholder="Enter your full name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-mobile">Mobile Number</label>
-                                    <input type="tel" id="distributor-mobile" placeholder="Enter mobile number" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-whatsapp">WhatsApp Number</label>
-                                    <input type="tel" id="distributor-whatsapp" placeholder="Enter WhatsApp number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-email">Email (Optional)</label>
-                                    <input type="email" id="distributor-email" placeholder="Enter email address">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-state">State</label>
-                                    <input type="text" id="distributor-state" placeholder="Enter your state" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-district">District</label>
-                                    <input type="text" id="distributor-district" placeholder="Enter your district" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-city">City</label>
-                                    <input type="text" id="distributor-city" placeholder="Enter your city" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-business">Current Business</label>
-                                    <input type="text" id="distributor-business" placeholder="e.g. Retail shop, FMCG distributor" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-coldstorage">Cold Storage Available?</label>
-                                    <select id="distributor-coldstorage" required>
-                                        <option value="" disabled selected>Select Yes / No</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-deliveryvehicle">Delivery Vehicle Available?</label>
-                                    <select id="distributor-deliveryvehicle" required>
-                                        <option value="" disabled selected>Select Yes / No</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="distributor-investment">Investment Capacity</label>
-                                    <input type="text" id="distributor-investment" placeholder="e.g. Rs. 5 Lakhs" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="distributor-expectedbusiness">Expected Monthly Business</label>
-                                    <input type="text" id="distributor-expectedbusiness" placeholder="e.g. Rs. 2 Lakhs" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="distributor-message">Message</label>
-                                <textarea id="distributor-message" rows="5" placeholder="Tell us more about your business experience or market area..." required></textarea>
-                            </div>
-                            <div class="contact-form-actions" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
-                                <button type="submit" class="btn btn-dark submit-contact-btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
-                                <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp submit-contact-btn">Apply via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
-                            </div>
-                        </form>
-
-                        <!-- Custom Dynamic Form Success Screen Overlay -->
-                        <div id="contact-success-screen" class="success-overlay">
-                            <div class="success-icon-wrapper">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <h3 class="success-title">Application Received!</h3>
-                            <p class="success-text">Thank you for submitting your Distributor Application! Our partnership team will review your application and contact you shortly.</p>
-                            <button type="button" id="success-close-btn" class="btn btn-dark success-overlay-close-btn">Close Form</button>
+                
+                <!-- Service Block 01: Manufacturing -->
+                <div class="services-flow-block scroll-reveal">
+                    <div class="services-flow-text">
+                        <div class="services-flow-number">01</div>
+                        <h2>Premium Manufacturing</h2>
+                        <p>Our state-of-the-art facility utilizes clean batching units and automated machinery. We source only high-grade milk fat, premium cocoa powder, and natural fruits to ensure every scoop is consistently rich, thick, and premium.</p>
+                        <div class="services-feature-pills">
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Clean Batching</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> High-Grade Fat</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Recipe Consistency</div>
                         </div>
                     </div>
+                    <div class="services-flow-visual">
+                        <img src="images/industry.png" alt="ORAS Premium Manufacturing">
+                    </div>
+                </div>
 
-                    <!-- Right: Contact Info and Interactive Widgets (Takes 0.8fr of width) -->
-                    <div style="display: flex; flex-direction: column; width: 100%;">
-                        <div class="perspective-container">
-                            <div class="contact-details-card">
-                                <div class="details-branding">
-                                    <h3>ORAS Ice Cream</h3>
-                                    <p>Crafting frozen happiness since 2018.</p>
-                                </div>
-                                <hr class="details-divider">
-                                <ul class="details-info-list">
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-phone"></i></div>
-                                        <div>
-                                            <strong>Phone</strong>
-                                            <a href="tel:+919672334414">+91 96723 34414</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-envelope"></i></div>
-                                        <div>
-                                            <strong>Email Address</strong>
-                                            <a href="mailto:orasinfo214@gmail.com">orasinfo214@gmail.com</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="details-icon"><i class="fa-solid fa-location-dot"></i></div>
-                                        <div>
-                                            <strong>Factory Address</strong>
-                                            <span>H-1, 214, Agro Food Park Second, RIICO Ranpur, Kota, Rajasthan - 325003</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                <!-- Service Block 02: Cold Chain -->
+                <div class="services-flow-block reverse scroll-reveal">
+                    <div class="services-flow-text">
+                        <div class="services-flow-number">02</div>
+                        <h2>Cold Chain Stability</h2>
+                        <p>To preserve structural integrity and fresh taste, we operate a sub-zero cold chain. High-capacity cold panels feed directly into our fleet of refrigerated vans, delivering frozen happiness to your store at perfect temperature profiles.</p>
+                        <div class="services-feature-pills">
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Refrigerated Fleet</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Sub-Zero Deep Storage</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Temp Monitoring</div>
                         </div>
+                    </div>
+                    <div class="services-flow-visual">
+                        <img src="images/truck.png" alt="ORAS Cold Chain Transport">
+                    </div>
+                </div>
 
-                        <!-- Google Maps Embed Card -->
-                        <div class="map-mockup-card" style="height: 300px;">
-                            <iframe 
-                                src="https://maps.google.com/maps?q=H-1%20214%20Agro%20Food%20Park%20Second%20RIICO%20Ranpur%20Kota%20Rajasthan%20325003&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0; display: block;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                <!-- Service Block 03: Bulk Supply & Events -->
+                <div class="services-flow-block scroll-reveal">
+                    <div class="services-flow-text">
+                        <div class="services-flow-number">03</div>
+                        <h2>Bulk Supply & Events</h2>
+                        <p>We are the trusted bulk dessert suppliers for hotels, event caterers, corporate gatherings, and wedding hosts. We provide customized bulk sizing packs (including our signature 5 Litre party packs), flexible wholesale dispatch pipelines, and consistent logistics to support large event catering schedules.</p>
+                        <div class="services-feature-pills">
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Catering Packs</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Bulk 5L Tubs</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Event Catering</div>
                         </div>
+                    </div>
+                    <div class="services-flow-visual">
+                        <img src="images/oras bulk.png" alt="ORAS Bulk Supply & Event Catering">
+                    </div>
+                </div>
+
+                <!-- Service Block 04: Partner Program -->
+                <div class="services-flow-block reverse scroll-reveal">
+                    <div class="services-flow-text">
+                        <div class="services-flow-number">04</div>
+                        <h2>Distributor Partnerships</h2>
+                        <p>Join the Kartik Foods regional partner network. We support exclusive territorial distributors with highly profitable margin structures, point-of-sale display boards, marketing support, and local campaign initiatives.</p>
+                        <div class="services-feature-pills">
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> High margins</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> Exclusive Areas</div>
+                            <div class="services-feature-pill"><i class="fa-solid fa-circle-check"></i> POS Branding Support</div>
+                        </div>
+                    </div>
+                    <div class="services-flow-visual">
+                        <img src="images/hand shake.png" alt="ORAS Distributor Partnerships">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Premium CTA Section -->
+        <section class="services-premium-cta scroll-reveal">
+            <div class="shell">
+                <div class="services-cta-glass">
+                    <h2>Ready to Scale Your Business?</h2>
+                    <p>Partner with Kartik Foods today to discuss exclusive franchise rights, product pricing list, or large-scale event supply chains.</p>
+                    <div class="services-cta-buttons">
+                        <a href="#" class="btn btn-light btn-quote">Become a Partner</a>
+                        <a href="contact.html" class="btn btn-outline-light">Contact Sales Team</a>
                     </div>
                 </div>
             </div>
@@ -317,8 +247,10 @@
                 <h3>Contact</h3>
                 <ul class="contact-info-list">
                     <li><i class="fa-solid fa-phone"></i><a href="tel:+919672334414">+91 96723 34414</a></li>
-                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:orasinfo214@gmail.com">orasinfo214@gmail.com</a></li>
-                    <li><i class="fa-solid fa-location-dot"></i><span>H-1, 214, Agro Food Park Second, RIICO Ranpur, Kota, Rajasthan - 325003</span></li>
+                    <li><i class="fa-solid fa-envelope"></i><a
+                            href="mailto:orasinfo214@gmail.com">orasinfo214@gmail.com</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>H-1, 214, Agro Food Park Second, RIICO Ranpur,
+                            Kota, Rajasthan - 325003</span></li>
                 </ul>
             </div>
         </div>

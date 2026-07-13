@@ -1005,7 +1005,7 @@ Please share the wholesale pricing, minimum order quantities, and distributor de
                     return `
                         <article class="product-card scroll-reveal visible" data-category="${prod.category}">
                             <div class="product-card-img-wrapper ${prod.bgClass || ''}">
-                                <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='images/product/vn.png';">
+                                <img src="${prod.image}" alt="${prod.name}" loading="lazy" onload="if(this.naturalWidth > this.naturalHeight) this.classList.add('img-landscape');" onerror="this.onerror=null; this.src='images/product/vn.png';">
                             </div>
                             <div class="product-card-info">
                                 <div class="product-card-meta">
