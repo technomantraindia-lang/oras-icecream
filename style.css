@@ -1665,7 +1665,7 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-template-columns: 1.5fr repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -3397,31 +3397,6 @@ body.loader-active {
     transform: translateY(-2px) !important;
 }
 
-@media (max-width: 480px) {
-    .whatsapp-flow-widget {
-        bottom: 20px;
-        right: 20px;
-        gap: 10px;
-    }
-
-    .whatsapp-flow-btn,
-    .floating-call-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-
-    .floating-call-btn {
-        font-size: 1.3rem;
-    }
-
-    .whatsapp-flow-panel {
-        width: calc(100% - 40px);
-        right: 20px;
-        bottom: 95px;
-        max-height: calc(100vh - 120px);
-    }
-}
 
 /* ==========================================================================
    MOBILE VIEWPORT AND ALIGNMENT FIXES
@@ -3481,18 +3456,6 @@ body.loader-active {
         margin: 0 auto 10px !important;
     }
 
-    /* Center footer columns and layout on mobile */
-    .footer-col {
-        text-align: center !important;
-    }
-
-    .footer-col ul {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 0 !important;
-    }
-
     /* Optimize header spacing to fit narrow screens */
     .btn-quote {
         padding: 8px 12px !important;
@@ -3509,15 +3472,153 @@ body.loader-active {
         height: 38px !important;
     }
 
-    /* 1 by 2 layout for mobile: Brand spans full width, others display in 2 columns */
+    /* 2-column layout for links, brand spans full width */
     .footer-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px 20px !important;
+        gap: 30px 20px !important;
     }
 
     .footer-brand {
         grid-column: span 2 !important;
-        margin-bottom: 10px;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+    }
+
+    .footer-col {
+        text-align: left !important;
+    }
+
+    /* Shift content inward slightly to balance the 2-column layout horizontally */
+    .footer-grid > .footer-col:nth-child(2),
+    .footer-grid > .footer-col:nth-child(3) {
+        padding-left: 12% !important;
+    }
+
+    .footer-col h3 {
+        font-size: 1.05rem !important;
+        margin-bottom: 14px !important;
+        color: var(--gold) !important; /* Premium Gold Headers */
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        font-weight: 700 !important;
+    }
+
+    .footer-col ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0 !important;
+        gap: 10px !important;
+    }
+
+    /* Style links with elegant prefix dashes and modern micro-animations */
+    .footer-col ul:not(.contact-info-list) a {
+        display: inline-flex !important;
+        align-items: center !important;
+        font-size: 0.95rem !important;
+        color: rgba(255, 255, 255, 0.72) !important;
+        transition: color var(--transition), transform var(--transition) !important;
+        padding: 2px 0 !important;
+    }
+
+    .footer-col ul:not(.contact-info-list) a::before {
+        content: "—" !important;
+        margin-right: 8px !important;
+        color: var(--gold) !important;
+        opacity: 0.7 !important;
+        transition: transform var(--transition), color var(--transition) !important;
+    }
+
+    .footer-col ul:not(.contact-info-list) a:hover {
+        color: var(--white) !important;
+        transform: translateX(6px) !important;
+    }
+
+    .footer-col ul:not(.contact-info-list) a:hover::before {
+        color: var(--gold) !important;
+        opacity: 1 !important;
+    }
+
+    /* Column ordering and grid placement for 2-column layout */
+    .footer-grid > .footer-col:nth-child(2) { /* Quick Links */
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+
+    .footer-grid > .footer-col:nth-child(3) { /* Products */
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+    }
+
+    .footer-grid > .footer-col:nth-child(4) { /* Contact Us */
+        grid-column: span 2 !important;
+        grid-row: 3 !important;
+        margin-top: 10px !important;
+    }
+
+    /* Contact Us Card Layout */
+    .footer-col:nth-child(4) h3 {
+        text-align: left !important;
+        margin-bottom: 16px !important;
+    }
+
+    .footer-col ul.contact-info-list {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .contact-info-list li {
+        display: grid !important;
+        grid-template-columns: 40px 1fr !important;
+        gap: 14px !important;
+        align-items: center !important;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)) !important;
+        border: 1px solid rgba(255, 255, 255, 0.07) !important;
+        padding: 12px 14px !important;
+        border-radius: var(--radius-sm) !important;
+        transition: transform var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition) !important;
+        width: 100% !important;
+    }
+
+    .contact-info-list li:hover {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)) !important;
+        border-color: rgba(255, 200, 74, 0.3) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .contact-info-list i {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 50% !important;
+        background: rgba(255, 200, 74, 0.08) !important;
+        border: 1px solid rgba(255, 200, 74, 0.2) !important;
+        color: var(--gold) !important;
+        margin: 0 !important;
+        font-size: 0.95rem !important;
+        transition: transform var(--transition), background var(--transition), color var(--transition) !important;
+    }
+
+    .contact-info-list li:hover i {
+        transform: scale(1.1) !important;
+        background: var(--gold) !important;
+        color: #13080a !important;
+    }
+
+    .contact-info-list span, 
+    .contact-info-list a {
+        font-size: 0.92rem !important;
+        line-height: 1.4 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
     }
 
     /* Ensure text wraps nicely and behaves at small viewports */
@@ -3529,6 +3630,73 @@ body.loader-active {
     /* Fix categories grid items margins */
     .categories-grid {
         padding: 0 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-flow-widget {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .whatsapp-flow-btn,
+    .floating-call-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .floating-call-btn {
+        font-size: 1.3rem;
+    }
+
+    .whatsapp-flow-panel {
+        width: calc(100% - 40px);
+        right: 20px;
+        bottom: 95px;
+        max-height: calc(100vh - 120px);
+    }
+
+    /* Fine-tune typography and layout on small screens to fit 2 columns */
+    .footer-col h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-col ul {
+        gap: 8px !important;
+    }
+
+    .footer-col ul:not(.contact-info-list) a {
+        font-size: 0.86rem !important;
+    }
+
+    .contact-info-list li {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+        grid-template-columns: 32px 1fr !important;
+    }
+
+    .contact-info-list i {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .contact-info-list span, 
+    .contact-info-list a {
+        font-size: 0.85rem !important;
+    }
+
+    .main-footer {
+        padding: 48px 0 32px !important;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem !important;
+        margin-top: 24px !important;
+        padding-top: 16px !important;
     }
 }
 
