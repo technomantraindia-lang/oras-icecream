@@ -968,7 +968,7 @@ I am interested in becoming a partner/distributor and would like to inquire abou
 🍨 *Product:* ${productName}
 📦 *Format/Size:* ${size}
 
-Please share the wholesale pricing, minimum order quantities, and distributor details. Thank you!`;
+Please share the pricing, minimum order quantities, and distributor details. Thank you!`;
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         };
@@ -1015,7 +1015,7 @@ Please share the wholesale pricing, minimum order quantities, and distributor de
                                 <p class="product-card-desc">${prod.description}</p>
                                 <div class="product-card-action">
                                     <button onclick="inquireProductWhatsApp('${prod.name}', '${prod.size}')" class="btn-card-inquire" aria-label="Inquire about ${prod.name}">
-                                        <i class="fa-brands fa-whatsapp"></i> Inquire Wholesale
+                                        <i class="fa-brands fa-whatsapp"></i> Inquire Now
                                     </button>
                                 </div>
                             </div>
