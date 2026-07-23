@@ -582,7 +582,7 @@ Thank you!`;
                 name: "Choco Vanilla 50ml",
                 category: "cone",
                 size: "50ml",
-                image: "images/product/cone.png",
+                image: "images/oras cone .png",
                 description: "Crispy waffle cone loaded with smooth vanilla ice cream and chocolate swirl.",
                 tag: "Classic"
             },
