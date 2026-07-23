@@ -602,9 +602,8 @@
                     <h2>Let our flavours find you first.</h2>
                     <p>Subscribe for updates on new launches, offers, and crowd favourites.</p>
                 </div>
-                <form class="newsletter-form scroll-reveal"
-                    onsubmit="event.preventDefault(); alert('Thank you for subscribing to ORAS.'); this.reset();">
-                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                <form id="newsletter-form" class="newsletter-form scroll-reveal">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" required class="newsletter-input">
                     <button type="submit" class="btn btn-dark">Subscribe</button>
                 </form>
             </div>
@@ -621,7 +620,7 @@
                 <div class="contact-layout scroll-reveal">
                     <!-- Left: Contact Form Card -->
                     <div class="contact-form-card">
-                        <form onsubmit="event.preventDefault(); alert('Thank you for submitting your Distributor Application! Our partnership team will review your application and contact you shortly.'); this.reset();">
+                        <form id="distributor-main-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="distributor-name">Name</label>

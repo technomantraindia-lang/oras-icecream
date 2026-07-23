@@ -209,7 +209,7 @@ Thank you!`;
     }
 
     // Main Contact Section WhatsApp Submit Button handler
-    const mainForm = document.querySelector('#contact-section form');
+    const mainForm = document.getElementById('distributor-main-form');
     const mainWaSubmitBtn = document.getElementById('submit-whatsapp-btn');
     if (mainForm && mainWaSubmitBtn) {
         mainWaSubmitBtn.addEventListener('click', (e) => {
@@ -234,6 +234,33 @@ Thank you!`;
                 expectedbusiness: document.getElementById('distributor-expectedbusiness').value,
                 message: document.getElementById('distributor-message').value
             };
+
+            // Send to Web3Forms in the background
+            const web3Payload = {
+                access_key: '2859d8b4-a547-43c5-963a-e4896a94618e',
+                subject: `New ORAS Distributor Inquiry (via WhatsApp Button) - ${details.name}`,
+                from_name: 'ORAS Ice Cream Website',
+                name: details.name,
+                mobile: details.mobile,
+                whatsapp: details.whatsapp,
+                email: details.email || 'Not provided',
+                location: `${details.city}, ${details.district}, ${details.state}`,
+                business: details.business,
+                cold_storage: details.coldstorage,
+                delivery_vehicle: details.deliveryvehicle,
+                investment_capacity: details.investment,
+                expected_business: details.expectedbusiness,
+                message: details.message
+            };
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(web3Payload)
+            }).catch(err => console.error('Web3Forms background submit failed:', err));
 
             sendWhatsAppInquiry(details);
         });
@@ -337,6 +364,33 @@ Thank you!`;
                     expectedbusiness: document.getElementById('wa-expectedbusiness').value,
                     message: document.getElementById('wa-message').value
                 };
+
+                // Send to Web3Forms in the background
+                const web3Payload = {
+                    access_key: '2859d8b4-a547-43c5-963a-e4896a94618e',
+                    subject: `New ORAS WhatsApp Inquiry - ${details.name}`,
+                    from_name: 'ORAS Ice Cream Website',
+                    name: details.name,
+                    mobile: details.mobile,
+                    whatsapp: details.whatsapp,
+                    email: details.email || 'Not provided',
+                    location: `${details.city}, ${details.district}, ${details.state}`,
+                    business: details.business,
+                    cold_storage: details.coldstorage,
+                    delivery_vehicle: details.deliveryvehicle,
+                    investment_capacity: details.investment,
+                    expected_business: details.expectedbusiness,
+                    message: details.message
+                };
+                
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(web3Payload)
+                }).catch(err => console.error('Web3Forms background submit failed:', err));
 
                 sendWhatsAppInquiry(details);
                 waFlowPanel.classList.remove('open');
@@ -447,7 +501,7 @@ Thank you!`;
     const successScreen = document.getElementById('contact-success-screen');
     const successCloseBtn = document.getElementById('success-close-btn');
     
-    if (contactForm && successScreen) {
+    if (contactForm) {
         const requiredInputs = Array.from(contactForm.querySelectorAll('[required]'));
         const progressBar = document.getElementById('form-progress');
         const progressPercentText = document.getElementById('progress-percent');
@@ -487,19 +541,121 @@ Thank you!`;
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const formCard = document.querySelector('.contact-form-card');
-            triggerConfetti(formCard);
+            // Get submit button to show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting <i class="fa-solid fa-spinner fa-spin"></i>';
             
-            successScreen.classList.add('show');
+            // Collect form data
+            const details = {
+                access_key: '2859d8b4-a547-43c5-963a-e4896a94618e',
+                subject: `New ORAS Distributor Inquiry - ${document.getElementById('distributor-name').value}`,
+                from_name: 'ORAS Ice Cream Website',
+                name: document.getElementById('distributor-name').value,
+                mobile: document.getElementById('distributor-mobile').value,
+                whatsapp: document.getElementById('distributor-whatsapp').value,
+                email: document.getElementById('distributor-email').value || 'Not provided',
+                location: `${document.getElementById('distributor-city').value}, ${document.getElementById('distributor-district').value}, ${document.getElementById('distributor-state').value}`,
+                business: document.getElementById('distributor-business').value,
+                cold_storage: document.getElementById('distributor-coldstorage').value,
+                delivery_vehicle: document.getElementById('distributor-deliveryvehicle').value,
+                investment_capacity: document.getElementById('distributor-investment').value,
+                expected_business: document.getElementById('distributor-expectedbusiness').value,
+                message: document.getElementById('distributor-message').value
+            };
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(details)
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    const formCard = document.querySelector('.contact-form-card');
+                    if (formCard) triggerConfetti(formCard);
+                    
+                    if (successScreen) {
+                        successScreen.classList.add('show');
+                    } else {
+                        // fallback custom modal or alert
+                        alert('Thank you for submitting your Distributor Application! Our partnership team will review your application and contact you shortly.');
+                        contactForm.reset();
+                        updateProgress();
+                    }
+                } else {
+                    console.error(json);
+                    alert(json.message || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                alert('Submit failed. Please check your network connection.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+            });
         });
         
-        if (successCloseBtn) {
+        if (successCloseBtn && successScreen) {
             successCloseBtn.addEventListener('click', () => {
                 successScreen.classList.remove('show');
                 contactForm.reset();
                 updateProgress();
             });
         }
+    }
+
+    // Newsletter Subscription Form Handler
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+            
+            const payload = {
+                access_key: '2859d8b4-a547-43c5-963a-e4896a94618e',
+                subject: 'New ORAS Newsletter Subscription',
+                from_name: 'ORAS Ice Cream Website',
+                email: emailInput.value
+            };
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    alert('Thank you for subscribing to ORAS!');
+                    newsletterForm.reset();
+                } else {
+                    let json = await response.json();
+                    alert(json.message || 'Something went wrong.');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                alert('Subscription failed. Please check your network connection.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        });
     }
 
     // ==========================================================================
